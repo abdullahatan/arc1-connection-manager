@@ -1,0 +1,437 @@
+{
+  "name": "繁體中文",
+  "ui": {
+    "app.title": "ARC-1 MCP 連線管理員",
+    "app.subtitle": "SAP ADT · MCP 設定",
+    "top.open": "開啟檔案",
+    "top.open.tt": "開啟現有的 .mcp.json 檔案",
+    "top.new": "新增檔案",
+    "top.new.tt": "建立含範例連線的新 .mcp.json",
+    "top.reload": "重新載入",
+    "top.reload.tt": "從磁碟重新讀取檔案",
+    "top.lang.tt": "應用程式語言",
+    "top.light.tt": "淺色佈景主題",
+    "top.dark.tt": "深色佈景主題",
+    "top.nofile": "未選取檔案",
+    "top.file.tt": "按一下以開啟其他檔案",
+    "side.title": "連線",
+    "side.new": "新增連線",
+    "side.copy": "複製",
+    "side.copy.tt": "複製所選連線",
+    "side.delete": "刪除",
+    "side.delete.tt": "刪除所選連線",
+    "side.noaddr": "尚未填寫位址",
+    "side.legacy.tt": "包含 ARC-1 已不再接受的設定，需要修正。",
+    "side.other": "其他 MCP 伺服器",
+    "side.other.tt": "不是 ARC-1 伺服器；保持不變",
+    "side.stored.tt": "密碼儲存在作業系統的認證存放區中",
+    "welcome.title": "歡迎",
+    "welcome.text": "首先，請開啟 Claude Code 使用的 .mcp.json 檔案，或建立含範例連線的新檔案。",
+    "welcome.hint": "Claude Code 會在啟動時所在的專案資料夾（例如 Eclipse 工作區）中尋找 .mcp.json。",
+    "welcome.open": "開啟現有檔案",
+    "welcome.open.desc": "選擇電腦上的 .mcp.json 檔案。",
+    "welcome.new": "建立新檔案",
+    "welcome.new.desc": "建立含 ARC-1 範例連線的 .mcp.json。",
+    "welcome.missing": "找不到上次使用的檔案：{0}",
+    "welcome.recent": "最近的檔案",
+    "welcome.shortcut": "建立桌面捷徑",
+    "welcome.shortcut.tt": "新增以 npx 啟動此應用程式的捷徑（桌面與「開始」功能表）",
+    "empty.title": "尚無連線",
+    "empty.text": "使用左下角的「新增連線」按鈕加入第一個 SAP 系統。",
+    "ed.name.tt": "按一下以重新命名連線",
+    "ed.system": "系統：{0}",
+    "ed.noaddr": "尚未填寫伺服器位址",
+    "ed.test": "測試連線",
+    "ed.test.tt": "嘗試登入 SAP ADT 服務",
+    "ed.validate": "用 ARC-1 檢查",
+    "ed.validate.tt": "讓此連線所用版本的 ARC-1 親自檢查這些設定",
+    "ed.conn": "SAP 連線",
+    "ed.settings": "設定",
+    "ed.settings.desc": "只有您新增的設定會寫入檔案，其餘一律使用 ARC-1 的預設值。",
+    "ed.add": "新增設定",
+    "ed.advanced": "進階",
+    "ed.cmd": "啟動命令",
+    "ed.cmd.help": "MCP 用戶端啟動 ARC-1 的方式。若要固定版本，請將 arc-1 寫成 arc-1@1.10.1。",
+    "ed.cmd.written": "寫入檔案的內容：",
+    "other.title": "不是 ARC-1 伺服器",
+    "other.text": "此項目屬於另一個 MCP 伺服器。儲存時會原樣保留。",
+    "other.cmd": "命令",
+    "f.url": "伺服器位址",
+    "f.url.help": "包含通訊協定與連接埠，例如 https://sap-host:44300",
+    "f.user": "使用者",
+    "f.user.help": "您的 SAP 使用者名稱。",
+    "f.pwd": "密碼",
+    "f.pwd.help": "以純文字儲存在檔案中。",
+    "f.pwd.help.store": "已加密儲存在{0}中。檔案中不含密碼。",
+    "f.client": "用戶端",
+    "f.client.help": "3 位數。留空時使用 100。",
+    "f.lang": "語言",
+    "f.lang.help": "留空時為 EN。也是新建立物件的原始語言。",
+    "pwd.show": "顯示密碼",
+    "pwd.hide": "隱藏密碼",
+    "pwd.mode.store": "認證存放區",
+    "pwd.mode.file": "檔案中",
+    "pwd.mode.store.tt": "建議：由作業系統加密保存密碼；.mcp.json 只透過此應用程式啟動 ARC-1。",
+    "pwd.mode.file.tt": "在 .mcp.json 中以純文字儲存。到處都能用，但能讀取該檔案的人也能讀取密碼。",
+    "pwd.na": "此電腦無法使用認證存放區：{0}",
+    "pwd.ph.stored": "已儲存在認證存放區",
+    "pwd.ph.none": "尚未儲存 – 請輸入密碼",
+    "store.windows": " Windows 認證管理員",
+    "store.macos": " macOS 鑰匙圈",
+    "store.linux": " Secret Service（GNOME Keyring / KWallet）",
+    "set.on": "開",
+    "set.off": "關",
+    "set.default": "預設值：{0}",
+    "set.empty": "空白",
+    "set.default.tt": "預設值",
+    "set.invalid.bool": "無效的值 '{0}'；ARC-1 會將其視為關閉。",
+    "set.invalid.enum": "無效的值 '{0}'；ARC-1 會使用預設值。",
+    "set.invalid.int": "「{0}」不是整數。",
+    "set.invalid.range": "允許範圍：{0}–{1}。",
+    "set.invalid.pattern": "「{0}」的格式不正確。",
+    "set.invalid.length": "最多 {0} 個字元。",
+    "set.invalid.list": "包含空項目（連續兩個逗號）。",
+    "set.fatal": "使用此值時 ARC-1 將無法啟動。",
+    "set.remove.tt": "移除此設定（使用 ARC-1 預設值）",
+    "set.browse.tt": "選擇檔案",
+    "set.none": "沒有額外設定。ARC-1 以全部預設值執行：唯讀，僅限 $TMP 套件。",
+    "set.legacy.title": "已移除的設定",
+    "set.legacy.help": "存在此設定時 ARC-1 無法啟動。",
+    "set.legacy.use": "請改用 '{0}'（{1}）。",
+    "set.legacy.inverted": "意義相反。",
+    "set.legacy.current": "目前的值：{0}",
+    "set.legacy.convert": "轉換：{0}",
+    "set.arc1says": "ARC-1 的訊息：{0}",
+    "legacy.denyactions": "請改用 '禁止的動作'（SAP_DENY_ACTIONS）。",
+    "legacy.profile": "設定檔已移除；請逐一新增權限。",
+    "legacy.apikey": "已移除（ARC1_API_KEYS 僅用於 HTTP 模式）。",
+    "legacy.removed": "已移除。",
+    "set.unknown.title": "無法辨識的設定",
+    "set.unknown.help": "ARC-1 不認得此設定，因此會忽略它。",
+    "set.unknown.typo": "您是指 {0} 嗎？",
+    "set.unknown.rename": "重新命名為 {0}",
+    "set.ignored.title": "被忽略的設定",
+    "set.ignored.help": "ARC-1 會忽略此設定。您可以將它移除。",
+    "set.server.title": "伺服器設定",
+    "set.server.help": "主要在 ARC-1 以共用 HTTP / BTP 伺服器執行時使用。",
+    "grp.legacy": "需要修正的設定",
+    "grp.other": "其他",
+    "feat.help": "auto：系統支援時啟用 · on：強制啟用 · off：停用。",
+    "issue.cmdwin": "在 Windows 上，Claude Code 只能透過 cmd /c 啟動 npx。",
+    "issue.fix": "修正",
+    "add.title": "新增設定",
+    "add.hint": "可依名稱、索引鍵或說明搜尋。使用 ↑ ↓ 移動，按 Enter 或按兩下即可新增。",
+    "add.nomatch": "沒有尚未新增的相符設定。",
+    "dlg.close.tt": "關閉 (Esc)",
+    "dlg.ok": "確定",
+    "dlg.cancel": "取消",
+    "dlg.yes": "是",
+    "dlg.no": "否",
+    "dlg.save": "儲存",
+    "dlg.dontsave": "不要儲存",
+    "dlg.overwrite": "覆寫",
+    "dlg.reload": "重新載入",
+    "dlg.saveanyway": "仍要儲存",
+    "dlg.replace": "取代",
+    "dlg.openit": "開啟它",
+    "lang.title": "語言",
+    "foot.save": "儲存",
+    "foot.save.tt": "儲存 (Ctrl+S)",
+    "foot.dirty": "有未儲存的變更",
+    "st.loaded": "已載入 {0} 個連線。",
+    "st.legacy": "{0}：包含 ARC-1 已不再接受的舊設定。請開啟該連線並按一下「轉換」。",
+    "st.saved": "已於 {0} 儲存。備份：{1}。請重新啟動 Claude Code 讓變更生效。",
+    "st.removed": "已移除 {0}（別忘了儲存）",
+    "st.converted": "{0} → {1} = {2} 已轉換（別忘了儲存）",
+    "st.added": "已新增 '{0}'（別忘了儲存）",
+    "st.newconn": "已新增連線：{0}（別忘了儲存）",
+    "st.copied": "已複製 '{0}' → {1}（別忘了儲存）",
+    "st.deleted": "已刪除 '{0}'（別忘了儲存）",
+    "st.created": "已建立新檔案：{0}",
+    "st.renamed": "已將「{0}」重新命名為「{1}」（別忘了儲存）",
+    "st.reloaded": "已從磁碟重新載入。",
+    "st.shortcut": "已建立捷徑：{0}",
+    "msg.name.empty": "連線名稱不可空白。",
+    "msg.name.exists": "名為 '{0}' 的連線已存在。",
+    "msg.read.fail": "無法讀取檔案：\n{0}",
+    "msg.legacy.save": "下列連線包含 ARC-1 已不再接受的設定：\n\n{0}\n\n以目前狀態，ARC-1 無法為其啟動。仍要儲存嗎？",
+    "msg.save.fail": "無法儲存：\n{0}",
+    "msg.unsaved": "有未儲存的變更。要儲存嗎？",
+    "msg.delete": "要刪除連線 '{0}' 嗎？",
+    "msg.url.first": "請先輸入伺服器位址。",
+    "msg.conflict": "開啟此檔案後，它在本應用程式之外被修改了。要覆寫這些修改，還是重新載入檔案並捨棄您的修改？",
+    "msg.exists": "{0} 已存在。要開啟它，還是用新的範例檔案取代它？（舊檔案會保留為 .bak。）",
+    "msg.store.fail": "無法存取作業系統的認證存放區：\n{0}",
+    "msg.store.need": "「{0}」：請先輸入伺服器位址和使用者。儲存的密碼與它們關聯。",
+    "msg.pwd.missing": "「{0}」：認證存放區中還沒有密碼。請先輸入密碼。",
+    "msg.pwd.confirm": "以下連線尚未儲存密碼：{0}。在您輸入密碼之前，ARC-1 無法登入 SAP。仍要儲存嗎？",
+    "msg.jsonc": "此檔案包含註解。儲存後會重寫為純 JSON，註解將會遺失。要繼續嗎？",
+    "msg.notjson": "只能開啟 .json 檔案。",
+    "msg.unexpected": "發生問題：\n{0}",
+    "msg.lost": "與應用程式的連線已中斷。如果您關閉了它的終端機，請以下列命令重新啟動：npx arc1-connection-manager",
+    "msg.bye": "應用程式已停止。您可以關閉此視窗。",
+    "msg.shortcut.fail": "無法建立捷徑：\n{0}",
+    "ban.changed": "此檔案在應用程式之外被修改了。",
+    "ban.missing": "磁碟上已沒有此檔案。儲存時會重新建立。",
+    "ban.reload": "重新載入",
+    "ban.keep": "保留我的版本",
+    "test.title": "連線測試",
+    "test.running": "正在測試連線…",
+    "test.ok": "連線成功 (HTTP {0})。可以存取 ADT 服務。",
+    "test.401": "使用者名稱或密碼錯誤 (HTTP 401)。",
+    "test.403": "已登入，但沒有 ADT 權限 (HTTP 403)。",
+    "test.404": "找不到 ADT 服務 (HTTP 404)。請確認 SICF 中 /sap/bc/adt 已啟用。",
+    "test.redirect": "伺服器重新導向到登入頁面（HTTP {0}）。可能已啟用 SAML / SSO；請嘗試「停用 SAML 重新導向」。",
+    "test.other": "伺服器傳回 HTTP {0}。",
+    "test.fail": "無法連線：\n{0}",
+    "test.ssl": "伺服器憑證不受信任：\n{0}\n\n若為自我簽署憑證，請透過「新增設定」加入「略過 SSL 驗證」。",
+    "test.notfound": "找不到伺服器：{0}。請檢查位址與網路 / VPN。",
+    "test.refused": "{0} 拒絕了連線。請檢查連接埠。",
+    "test.timeout": "15 秒內沒有回應。請檢查位址與網路 / VPN。",
+    "test.badurl": "伺服器位址必須以 http:// 或 https:// 開頭。",
+    "val.title": "ARC-1 檢查",
+    "val.running": "ARC-1 正在檢查設定… 第一次檢查時 npx 需要下載 ARC-1，可能要一分鐘左右。",
+    "val.ok": "ARC-1 {0} 接受這些設定。",
+    "val.fail": "使用這些設定時 ARC-1 {0} 將無法啟動：",
+    "val.error": "無法執行 ARC-1：",
+    "val.timeout": "ARC-1 未能及時回應。請檢查連到 npm 登錄的網路連線。",
+    "val.nonpx": "找不到 npx。ARC-1 需要 Node.js；請從 nodejs.org 安裝。",
+    "val.policy": "生效的權限",
+    "val.writes": "寫入",
+    "val.packages": "可寫入的套件",
+    "val.transports": "傳輸請求寫入",
+    "val.git": "Git 寫入",
+    "val.data": "資料表資料預覽",
+    "val.sql": "自由 SQL",
+    "val.deny": "禁止的動作",
+    "val.sources": "已封鎖的資料來源",
+    "val.allowed": "允許",
+    "val.blocked": "禁止",
+    "val.none": "無",
+    "val.warnings": "ARC-1 警告",
+    "fb.open.title": "開啟 MCP 設定",
+    "fb.new.title": "建立新檔案",
+    "fb.pick.title": "選擇檔案",
+    "fb.places": "位置",
+    "fb.cwd": "目前資料夾",
+    "fb.home": "主資料夾",
+    "fb.desktop": "桌面",
+    "fb.documents": "文件",
+    "fb.workspace": "Eclipse 工作區",
+    "fb.claude": "Claude Desktop 設定",
+    "fb.recent": "最近",
+    "fb.drives": "本機",
+    "fb.up": "上一層",
+    "fb.go": "前往",
+    "fb.path": "路徑",
+    "fb.empty": "這裡沒有資料夾或 .json 檔案。",
+    "fb.open": "開啟",
+    "fb.create": "在此建立",
+    "fb.select": "選取",
+    "fb.filename": "檔案名稱",
+    "fb.err": "無法開啟此資料夾：\n{0}",
+    "fb.hint.open": "選擇 .mcp.json 或其他 MCP 設定，例如 claude_desktop_config.json。",
+    "fb.hint.new": "選擇啟動 Claude Code 的專案資料夾。檔案會建立在那裡。"
+  },
+  "groups": {
+    "perm": "權限",
+    "quality": "程式碼品質",
+    "conn": "連線（進階）",
+    "btp": "BTP",
+    "feat": "功能偵測",
+    "tools": "工具",
+    "perf": "效能",
+    "log": "記錄",
+    "plugins": "擴充功能"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "允許寫入",
+      "建立、變更、刪除及啟用物件。關閉時 ARC-1 只會讀取。"
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "可寫入的套件",
+      "以逗號分隔：ZFOO（完全相符）、Z*（前置詞）、ZFOO/**（含子套件）、*（全部）。"
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "傳輸寫入",
+      "建立 / 釋放傳輸請求。也必須開啟「允許寫入」。"
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "允許的傳輸請求",
+      "只寫入這些請求，以逗號分隔（例如 DEVK900123）。留空表示不限制。"
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Git 寫入 (abapGit / gCTS)",
+      "Push、Pull 等。也必須開啟「允許寫入」。"
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "資料表資料預覽",
+      "讀取資料表 / CDS 資料，類似 SE16。"
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "自由 SQL",
+      "執行手寫的 SELECT 查詢。"
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "封鎖的資料來源",
+      "禁止讀取資料的資料表 / CDS 名稱，以逗號分隔（實驗性）。"
+    ],
+    "SAP_DENY_ACTIONS": [
+      "禁止的動作",
+      "個別停用的動作，以逗號分隔。例如 SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "寫入前執行 abaplint",
+      "在原始碼寫入 SAP 之前執行 abaplint。"
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "寫入前進行 SAP 語法檢查",
+      "在 SAP 端進行語法檢查（僅警告，不阻擋）。"
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "abaplint 組態檔",
+      "自訂 abaplint.json 的完整路徑。"
+    ],
+    "SAP_INSECURE": [
+      "略過 SSL 驗證",
+      "用於使用自我簽署憑證的系統。"
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "系統類型",
+      "auto：自動偵測 · onprem：內部部署 · btp：BTP ABAP Environment。"
+    ],
+    "SAP_ABAP_RELEASE": [
+      "ABAP 版本",
+      "abaplint 使用的 SAP_BASIS 版本（例如 758）。通常會自動偵測。"
+    ],
+    "SAP_DISABLE_SAML": [
+      "停用 SAML 重新導向",
+      "當 Basic 登入卡在 SAML 重新導向時使用。請勿用於 BTP / S/4 Cloud。"
+    ],
+    "SAP_COOKIE_FILE": [
+      "Cookie 檔案",
+      "Netscape 格式 Cookie 檔案的路徑（SSO 情境）。"
+    ],
+    "SAP_COOKIE_STRING": [
+      "Cookie 字串",
+      "格式為 k=v; k2=v2 的 Cookie（僅在啟動時讀取）。"
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "傳送給 SAP 的用戶端名稱。請勿包含機密資訊。"
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "壓縮資料預覽要求",
+      "僅在 Web 應用程式防火牆 (WAF) 造成問題時使用。"
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "服務金鑰檔案",
+      "BTP ABAP 服務金鑰 (JSON) 的路徑。首次使用時會在瀏覽器中登入。"
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "服務金鑰（JSON 文字）",
+      "直接使用 JSON 內容而非檔案。"
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "OAuth 回呼連接埠",
+      "0 = 自動。"
+    ],
+    "ARC1_TOOL_MODE": [
+      "工具模式",
+      "standard：12 個工具 · hyperfocused：單一工具（權杖極少）。"
+    ],
+    "ARC1_SERVER_NAME": [
+      "伺服器名稱",
+      "在 MCP 用戶端中顯示的名稱。請為每個系統設定不同的名稱。"
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "系統標籤",
+      "向模型顯示的一行說明（例如 DEV 100）。最多 160 個字元。"
+    ],
+    "ARC1_IDE_LINKS": [
+      "Eclipse 連結",
+      "eclipse：在回應中加入 Eclipse ADT 連結（需要系統 ID）。"
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "系統 ID (SID)",
+      "真實的 3 字元 SAP SID，大寫（例如 DEV）。"
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "結構描述相容性",
+      "Claude 使用 auto 即可。on：OpenAI / Azure 嚴格模式。"
+    ],
+    "ARC1_UI": [
+      "瀏覽器主控台",
+      "在瀏覽器中檢視 ARC-1 狀態的實驗性唯讀畫面。local：在本機啟動。"
+    ],
+    "ARC1_UI_OPEN": [
+      "啟動時開啟主控台",
+      "ARC-1 啟動時自動開啟瀏覽器主控台。"
+    ],
+    "ARC1_UI_ADDR": [
+      "主控台位址",
+      "瀏覽器主控台的位址與連接埠。必須維持在 127.0.0.1。"
+    ],
+    "ARC1_UI_PORT": [
+      "主控台連接埠",
+      "只變更瀏覽器主控台位址中的連接埠。"
+    ],
+    "ARC1_CACHE": [
+      "快取",
+      "auto · memory：記憶體 · sqlite：檔案 · none：關閉。"
+    ],
+    "ARC1_CACHE_FILE": [
+      "快取檔案",
+      "sqlite 模式下使用的檔案路徑。"
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "SAP 同時要求數",
+      "同時傳送的 SAP 要求的最大數量。"
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "資料回應上限（位元組）",
+      "每次讀取資料的最大位元組數（預設 2 MB）。"
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "同時資料結果數",
+      "同時處理的資料結果的最大數量。"
+    ],
+    "ARC1_LOG_LEVEL": [
+      "記錄層級",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "記錄格式",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "記錄檔",
+      "寫入記錄的檔案完整路徑。"
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "HTTP 偵錯記錄",
+      "在記錄中加入要求與回應的詳細資料。敏感標頭會被隱藏。僅供疑難排解使用。"
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "簡短錯誤訊息",
+      "對模型隱藏 SAP 錯誤詳細資料。"
+    ],
+    "SAP_VERBOSE": [
+      "詳細記錄",
+      "記錄所有 HTTP 要求（記錄層級變為 debug）。"
+    ],
+    "ARC1_PLUGINS": [
+      "擴充功能檔案",
+      "擴充功能的完整路徑，以逗號分隔（.js / .json）。"
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "允許擴充功能執行 ABAP",
+      "也必須開啟「允許寫入」。"
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "允許擴充功能寫入 OData / ICF",
+      "也必須開啟「允許寫入」。"
+    ]
+  }
+}

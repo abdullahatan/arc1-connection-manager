@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARC-1 MCP Connection Manager</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app" aria-busy="true">
+    <header class="topbar">
+      <div class="brand">
+        <img src="logo.png" alt="" width="34" height="34">
+        <div class="brand-text">
+          <div class="brand-title" data-t="app.title">ARC-1 MCP Connection Manager</div>
+          <div class="brand-sub" data-t="app.subtitle">SAP ADT · MCP settings</div>
+        </div>
+      </div>
+      <button class="filebox" id="fileBox" type="button" data-tt="top.file.tt">
+        <span class="ic" data-icon="document"></span>
+        <span class="filebox-path" id="filePath" data-t="top.nofile">No file selected</span>
+      </button>
+      <div class="top-actions">
+        <button class="btn" id="btnOpen" type="button" data-tt="top.open.tt"><span class="ic" data-icon="folderOpen"></span><span class="lbl" data-t="top.open">Open File</span></button>
+        <button class="btn" id="btnNew" type="button" data-tt="top.new.tt"><span class="ic" data-icon="docAdd"></span><span class="lbl" data-t="top.new">New File</span></button>
+        <button class="btn" id="btnReload" type="button" data-tt="top.reload.tt" disabled><span class="ic" data-icon="refresh"></span><span class="lbl" data-t="top.reload">Reload</span></button>
+        <button class="btn" id="btnLang" type="button" data-tt="top.lang.tt"><span class="ic" data-icon="globe"></span><span class="lbl" id="langName">English</span></button>
+        <div class="seg theme-seg" role="group">
+          <button type="button" id="btnLight" data-tt="top.light.tt"><span class="ic" data-icon="sun"></span></button>
+          <button type="button" id="btnDark" data-tt="top.dark.tt"><span class="ic" data-icon="moon"></span></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner" id="banner" hidden></div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="side-head"><span data-t="side.title">Connections</span><span class="count" id="connCount"></span></div>
+        <div class="conn-scroll"><ul class="conn-list" id="connList" role="listbox"></ul></div>
+        <div class="side-actions">
+          <button class="btn accent wide" id="btnAddConn" type="button" disabled><span class="ic" data-icon="add"></span><span data-t="side.new">New Connection</span></button>
+          <div class="side-row">
+            <button class="btn" id="btnDup" type="button" data-tt="side.copy.tt" disabled><span class="ic" data-icon="copy"></span><span data-t="side.copy">Duplicate</span></button>
+            <button class="btn danger-text" id="btnDel" type="button" data-tt="side.delete.tt" disabled><span class="ic" data-icon="trash"></span><span data-t="side.delete">Delete</span></button>
+          </div>
+        </div>
+      </aside>
+      <main class="main" id="main"></main>
+    </div>
+
+    <footer class="footer">
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <div class="dirty" id="dirty" hidden><span class="dot"></span><span data-t="foot.dirty">Unsaved changes</span></div>
+      <button class="btn accent" id="btnSave" type="button" data-tt="foot.save.tt" disabled><span class="ic" data-icon="save"></span><span data-t="foot.save">Save</span></button>
+    </footer>
+  </div>
+  <div id="layers"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

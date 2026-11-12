@@ -1,0 +1,437 @@
+{
+  "name": "日本語",
+  "ui": {
+    "app.title": "ARC-1 MCP 接続マネージャー",
+    "app.subtitle": "SAP ADT · MCP 設定",
+    "top.open": "ファイルを開く",
+    "top.open.tt": "既存の .mcp.json ファイルを開く",
+    "top.new": "新規ファイル",
+    "top.new.tt": "サンプル接続を含む新しい .mcp.json を作成",
+    "top.reload": "再読み込み",
+    "top.reload.tt": "ディスクからファイルを再読み込み",
+    "top.lang.tt": "アプリの言語",
+    "top.light.tt": "ライト テーマ",
+    "top.dark.tt": "ダーク テーマ",
+    "top.nofile": "ファイルが選択されていません",
+    "top.file.tt": "クリックして別のファイルを開く",
+    "side.title": "接続",
+    "side.new": "新しい接続",
+    "side.copy": "複製",
+    "side.copy.tt": "選択した接続を複製",
+    "side.delete": "削除",
+    "side.delete.tt": "選択した接続を削除",
+    "side.noaddr": "アドレス未入力",
+    "side.legacy.tt": "ARC-1 が受け付けなくなった設定が含まれています。修正が必要です。",
+    "side.other": "その他の MCP サーバー",
+    "side.other.tt": "ARC-1 サーバーではありません。変更されずにそのまま残ります",
+    "side.stored.tt": "パスワードは OS の資格情報ストアに保存されています",
+    "welcome.title": "ようこそ",
+    "welcome.text": "まず Claude Code が使用する .mcp.json ファイルを開くか、サンプル接続を含む新しいファイルを作成してください。",
+    "welcome.hint": "Claude Code は起動したプロジェクト フォルダー (例: Eclipse のワークスペース) で .mcp.json を探します。",
+    "welcome.open": "既存のファイルを開く",
+    "welcome.open.desc": "コンピューター上の .mcp.json ファイルを選択します。",
+    "welcome.new": "新しいファイルを作成",
+    "welcome.new.desc": "ARC-1 のサンプル接続を含む .mcp.json を作成します。",
+    "welcome.missing": "最後に使用したファイルが見つかりません: {0}",
+    "welcome.recent": "最近使ったファイル",
+    "welcome.shortcut": "デスクトップにショートカットを作成",
+    "welcome.shortcut.tt": "このアプリを npx で起動するショートカットを追加します (デスクトップとスタート メニュー)",
+    "empty.title": "接続はまだありません",
+    "empty.text": "左下の [新しい接続] ボタンで最初の SAP システムを追加してください。",
+    "ed.name.tt": "クリックして接続名を変更",
+    "ed.system": "システム: {0}",
+    "ed.noaddr": "サーバー アドレスが未入力です",
+    "ed.test": "接続をテスト",
+    "ed.test.tt": "SAP ADT サービスへのサインインを試行",
+    "ed.validate": "ARC-1 でチェック",
+    "ed.validate.tt": "この接続が使用するバージョンの ARC-1 自身に、これらの設定をチェックさせます",
+    "ed.conn": "SAP 接続",
+    "ed.settings": "設定",
+    "ed.settings.desc": "ファイルに書き込まれるのは追加した設定だけです。それ以外は ARC-1 の既定値が適用されます。",
+    "ed.add": "設定を追加",
+    "ed.advanced": "詳細",
+    "ed.cmd": "起動コマンド",
+    "ed.cmd.help": "MCP クライアントが ARC-1 を起動する方法です。バージョンを固定するには、arc-1 の代わりに arc-1@1.10.1 と入力します。",
+    "ed.cmd.written": "ファイルには次のように書き込まれます:",
+    "other.title": "ARC-1 サーバーではありません",
+    "other.text": "このエントリは別の MCP サーバーのものです。保存しても内容はそのまま保持されます。",
+    "other.cmd": "コマンド",
+    "f.url": "サーバー アドレス",
+    "f.url.help": "プロトコルとポートを含めて入力 (例: https://sap-host:44300)",
+    "f.user": "ユーザー",
+    "f.user.help": "SAP のユーザー名。",
+    "f.pwd": "パスワード",
+    "f.pwd.help": "ファイルにプレーン テキストで保存されます。",
+    "f.pwd.help.store": "{0} に暗号化して保存されます。ファイルにはパスワードは含まれません。",
+    "f.client": "クライアント",
+    "f.client.help": "3 桁。空欄の場合は 100 を使用します。",
+    "f.lang": "言語",
+    "f.lang.help": "空欄の場合は EN。新規作成されるオブジェクトの原語にもなります。",
+    "pwd.show": "パスワードを表示",
+    "pwd.hide": "パスワードを隠す",
+    "pwd.mode.store": "資格情報ストア",
+    "pwd.mode.file": "ファイル内",
+    "pwd.mode.store.tt": "推奨: OS がパスワードを暗号化して保管します。.mcp.json はこのアプリ経由でのみ ARC-1 を起動します。",
+    "pwd.mode.file.tt": ".mcp.json 内のプレーン テキストです。どこでも動作しますが、ファイルを読める人はパスワードも読めます。",
+    "pwd.na": "このコンピューターでは資格情報ストアを使用できません: {0}",
+    "pwd.ph.stored": "資格情報ストアに保存済み",
+    "pwd.ph.none": "未保存 – パスワードを入力してください",
+    "store.windows": "Windows 資格情報マネージャー",
+    "store.macos": "macOS キーチェーン",
+    "store.linux": "Secret Service (GNOME Keyring / KWallet)",
+    "set.on": "オン",
+    "set.off": "オフ",
+    "set.default": "既定値: {0}",
+    "set.empty": "空",
+    "set.default.tt": "既定値",
+    "set.invalid.bool": "無効な値 '{0}' です。ARC-1 はオフとして扱います。",
+    "set.invalid.enum": "無効な値 '{0}' です。ARC-1 は既定値を使用します。",
+    "set.invalid.int": "'{0}' は整数ではありません。",
+    "set.invalid.range": "許容範囲: {0}～{1}。",
+    "set.invalid.pattern": "'{0}' は想定された形式ではありません。",
+    "set.invalid.length": "最大 {0} 文字です。",
+    "set.invalid.list": "空の項目があります (カンマが 2 つ続いています)。",
+    "set.fatal": "この値では ARC-1 は起動しません。",
+    "set.remove.tt": "この設定を削除 (ARC-1 の既定値を適用)",
+    "set.browse.tt": "ファイルを選択",
+    "set.none": "追加の設定はありません。ARC-1 はすべて既定値で動作します: 読み取り専用、$TMP パッケージのみ。",
+    "set.legacy.title": "廃止された設定",
+    "set.legacy.help": "この設定があると ARC-1 は起動しません。",
+    "set.legacy.use": "代わりに '{0}' ({1}) を使用してください。",
+    "set.legacy.inverted": "意味が逆になっています。",
+    "set.legacy.current": "現在の値: {0}",
+    "set.legacy.convert": "変換: {0}",
+    "set.arc1says": "ARC-1 のメッセージ: {0}",
+    "legacy.denyactions": "代わりに '禁止アクション' (SAP_DENY_ACTIONS) を使用してください。",
+    "legacy.profile": "プロファイルは廃止されました。権限を個別に追加してください。",
+    "legacy.apikey": "廃止されました (ARC1_API_KEYS は HTTP モードでのみ使用)。",
+    "legacy.removed": "廃止されました。",
+    "set.unknown.title": "認識されない設定",
+    "set.unknown.help": "ARC-1 はこの設定を認識しないため、無視されます。",
+    "set.unknown.typo": "{0} のことですか?",
+    "set.unknown.rename": "{0} に名前を変更",
+    "set.ignored.title": "無視される設定",
+    "set.ignored.help": "ARC-1 はこの設定を無視します。削除してかまいません。",
+    "set.server.title": "サーバー設定",
+    "set.server.help": "主に ARC-1 を共有の HTTP / BTP サーバーとして実行する場合に使用します。",
+    "grp.legacy": "修正が必要な設定",
+    "grp.other": "その他",
+    "feat.help": "auto: システムが対応していれば有効 · on: 強制的に有効 · off: 無効。",
+    "issue.cmdwin": "Windows では、Claude Code は cmd /c 経由でのみ npx を起動できます。",
+    "issue.fix": "修正",
+    "add.title": "設定を追加",
+    "add.hint": "名前、キー、説明で検索できます。↑ ↓ で移動し、Enter またはダブルクリックで追加します。",
+    "add.nomatch": "一致する未追加の設定はありません。",
+    "dlg.close.tt": "閉じる (Esc)",
+    "dlg.ok": "OK",
+    "dlg.cancel": "キャンセル",
+    "dlg.yes": "はい",
+    "dlg.no": "いいえ",
+    "dlg.save": "保存",
+    "dlg.dontsave": "保存しない",
+    "dlg.overwrite": "上書き",
+    "dlg.reload": "再読み込み",
+    "dlg.saveanyway": "このまま保存",
+    "dlg.replace": "置き換え",
+    "dlg.openit": "開く",
+    "lang.title": "言語",
+    "foot.save": "保存",
+    "foot.save.tt": "保存 (Ctrl+S)",
+    "foot.dirty": "未保存の変更があります",
+    "st.loaded": "{0} 件の接続を読み込みました。",
+    "st.legacy": "{0}: ARC-1 が受け付けなくなった古い設定があります。接続を開いて [変換] をクリックしてください。",
+    "st.saved": "{0} に保存しました。バックアップ: {1}。変更を反映するには Claude Code を再起動してください。",
+    "st.removed": "{0} を削除しました (保存を忘れずに)",
+    "st.converted": "{0} → {1} = {2} に変換しました (保存を忘れずに)",
+    "st.added": "'{0}' を追加しました (保存を忘れずに)",
+    "st.newconn": "新しい接続を追加しました: {0} (保存を忘れずに)",
+    "st.copied": "'{0}' を複製しました → {1} (保存を忘れずに)",
+    "st.deleted": "'{0}' を削除しました (保存を忘れずに)",
+    "st.created": "新しいファイルを作成しました: {0}",
+    "st.renamed": "'{0}' の名前を '{1}' に変更しました (保存を忘れずに)",
+    "st.reloaded": "ディスクから再読み込みしました。",
+    "st.shortcut": "ショートカットを作成しました: {0}",
+    "msg.name.empty": "接続名を空にすることはできません。",
+    "msg.name.exists": "'{0}' という名前の接続は既に存在します。",
+    "msg.read.fail": "ファイルを読み込めませんでした:\n{0}",
+    "msg.legacy.save": "次の接続には ARC-1 が受け付けなくなった設定が含まれています:\n\n{0}\n\nこのままでは ARC-1 は起動しません。それでも保存しますか?",
+    "msg.save.fail": "保存できませんでした:\n{0}",
+    "msg.unsaved": "未保存の変更があります。保存しますか?",
+    "msg.delete": "接続 '{0}' を削除しますか?",
+    "msg.url.first": "先にサーバー アドレスを入力してください。",
+    "msg.conflict": "このファイルは開いた後に、このアプリの外部で変更されました。その変更を上書きしますか? それとも、ファイルを再読み込みして自分の変更を破棄しますか?",
+    "msg.exists": "{0} は既に存在します。開きますか? それとも新しいサンプル ファイルで置き換えますか? (古いファイルは .bak として残ります。)",
+    "msg.store.fail": "OS の資格情報ストアにアクセスできませんでした:\n{0}",
+    "msg.store.need": "'{0}': 先にサーバー アドレスとユーザーを入力してください。保存されたパスワードはこれらに関連付けられます。",
+    "msg.pwd.missing": "'{0}': 資格情報ストアにまだパスワードがありません。先にパスワードを入力してください。",
+    "msg.pwd.confirm": "次の接続にはまだパスワードが保存されていません: {0}。入力するまで ARC-1 は SAP にサインインできません。このまま保存しますか?",
+    "msg.jsonc": "このファイルにはコメントが含まれています。保存すると通常の JSON として書き直され、コメントは失われます。続行しますか?",
+    "msg.notjson": "開けるのは .json ファイルだけです。",
+    "msg.unexpected": "問題が発生しました:\n{0}",
+    "msg.lost": "アプリとの接続が切れました。ターミナルを閉じた場合は、次のコマンドで再起動してください: npx arc1-connection-manager",
+    "msg.bye": "アプリは停止しました。このウィンドウを閉じてかまいません。",
+    "msg.shortcut.fail": "ショートカットを作成できませんでした:\n{0}",
+    "ban.changed": "このファイルはアプリの外部で変更されました。",
+    "ban.missing": "このファイルはディスク上にもうありません。保存すると再作成されます。",
+    "ban.reload": "再読み込み",
+    "ban.keep": "自分のバージョンを保持",
+    "test.title": "接続テスト",
+    "test.running": "接続をテストしています…",
+    "test.ok": "接続に成功しました (HTTP {0})。ADT サービスにアクセスできます。",
+    "test.401": "ユーザー名またはパスワードが正しくありません (HTTP 401)。",
+    "test.403": "サインインしましたが、ADT の権限がありません (HTTP 403)。",
+    "test.404": "ADT サービスが見つかりません (HTTP 404)。SICF で /sap/bc/adt が有効か確認してください。",
+    "test.redirect": "サーバーがサインイン ページにリダイレクトしました (HTTP {0})。SAML / SSO が有効な可能性があります。'SAML リダイレクトを無効化' を試してください。",
+    "test.other": "サーバーが HTTP {0} を返しました。",
+    "test.fail": "接続できませんでした:\n{0}",
+    "test.ssl": "サーバーの証明書が信頼されていません:\n{0}\n\n自己署名証明書の場合は、[設定を追加] から 'SSL 検証をスキップ' を追加してください。",
+    "test.notfound": "サーバーが見つかりません: {0}。アドレスとネットワーク / VPN を確認してください。",
+    "test.refused": "{0} が接続を拒否しました。ポートを確認してください。",
+    "test.timeout": "15 秒以内に応答がありませんでした。アドレスとネットワーク / VPN を確認してください。",
+    "test.badurl": "サーバー アドレスは http:// または https:// で始まる必要があります。",
+    "val.title": "ARC-1 チェック",
+    "val.running": "ARC-1 が設定をチェックしています… 初回は npx が ARC-1 をダウンロードするため 1 分ほどかかることがあります。",
+    "val.ok": "ARC-1 {0} はこれらの設定を受け入れます。",
+    "val.fail": "これらの設定では ARC-1 {0} は起動しません:",
+    "val.error": "ARC-1 を実行できませんでした:",
+    "val.timeout": "ARC-1 が時間内に応答しませんでした。npm レジストリへのネットワーク接続を確認してください。",
+    "val.nonpx": "npx が見つかりません。ARC-1 には Node.js が必要です。nodejs.org からインストールしてください。",
+    "val.policy": "有効な権限",
+    "val.writes": "書き込み",
+    "val.packages": "書き込み可能なパッケージ",
+    "val.transports": "移送の書き込み",
+    "val.git": "Git の書き込み",
+    "val.data": "テーブル データのプレビュー",
+    "val.sql": "自由 SQL",
+    "val.deny": "禁止されたアクション",
+    "val.sources": "ブロックされたデータ ソース",
+    "val.allowed": "許可",
+    "val.blocked": "ブロック",
+    "val.none": "なし",
+    "val.warnings": "ARC-1 の警告",
+    "fb.open.title": "MCP 構成を開く",
+    "fb.new.title": "新しいファイルを作成",
+    "fb.pick.title": "ファイルを選択",
+    "fb.places": "場所",
+    "fb.cwd": "現在のフォルダー",
+    "fb.home": "ホーム",
+    "fb.desktop": "デスクトップ",
+    "fb.documents": "ドキュメント",
+    "fb.workspace": "Eclipse ワークスペース",
+    "fb.claude": "Claude Desktop の構成",
+    "fb.recent": "最近使った項目",
+    "fb.drives": "PC",
+    "fb.up": "1 つ上のフォルダー",
+    "fb.go": "移動",
+    "fb.path": "パス",
+    "fb.empty": "ここにはフォルダーも .json ファイルもありません。",
+    "fb.open": "開く",
+    "fb.create": "ここに作成",
+    "fb.select": "選択",
+    "fb.filename": "ファイル名",
+    "fb.err": "このフォルダーを開けません:\n{0}",
+    "fb.hint.open": ".mcp.json、または claude_desktop_config.json などの別の MCP 構成を選択してください。",
+    "fb.hint.new": "Claude Code を起動するプロジェクト フォルダーを選択してください。ファイルはそこに作成されます。"
+  },
+  "groups": {
+    "perm": "権限",
+    "quality": "コード品質",
+    "conn": "接続 (詳細)",
+    "btp": "BTP",
+    "feat": "機能の検出",
+    "tools": "ツール",
+    "perf": "パフォーマンス",
+    "log": "ログ",
+    "plugins": "拡張機能"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "書き込みを許可",
+      "オブジェクトの作成・変更・削除・有効化。オフの場合、ARC-1 は読み取りのみ行います。"
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "書き込み可能なパッケージ",
+      "カンマ区切り: ZFOO (完全一致)、Z* (前方一致)、ZFOO/** (サブパッケージを含む)、* (すべて)。"
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "移送の書き込み",
+      "移送依頼の作成 / リリース。[書き込みを許可] もオンにする必要があります。"
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "許可する移送依頼",
+      "これらの依頼にのみ書き込みます。カンマ区切り (例: DEVK900123)。空欄なら制限なし。"
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Git の書き込み (abapGit / gCTS)",
+      "Push、Pull など。[書き込みを許可] もオンにする必要があります。"
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "テーブル データのプレビュー",
+      "SE16 のようにテーブル / CDS のデータを読み取ります。"
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "自由 SQL",
+      "手書きの SELECT クエリを実行します。"
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "ブロックするデータ ソース",
+      "データの読み取りを禁止するテーブル / CDS 名、カンマ区切り (試験的)。"
+    ],
+    "SAP_DENY_ACTIONS": [
+      "禁止アクション",
+      "個別に無効化するアクション、カンマ区切り。例: SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "書き込み前に abaplint",
+      "ソース コードを SAP に書き込む前に abaplint を実行します。"
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "書き込み前に SAP 構文チェック",
+      "SAP 側での構文チェック (警告のみ、ブロックしません)。"
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "abaplint 構成ファイル",
+      "独自の abaplint.json のフル パス。"
+    ],
+    "SAP_INSECURE": [
+      "SSL 検証をスキップ",
+      "自己署名証明書を使用するシステム向け。"
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "システムの種類",
+      "auto: 自動検出 · onprem: オンプレミス · btp: BTP ABAP Environment。"
+    ],
+    "SAP_ABAP_RELEASE": [
+      "ABAP リリース",
+      "abaplint 用の SAP_BASIS リリース (例: 758)。通常は自動検出されます。"
+    ],
+    "SAP_DISABLE_SAML": [
+      "SAML リダイレクトを無効化",
+      "Basic サインインが SAML リダイレクトで止まる場合。BTP / S/4 Cloud では使用しないでください。"
+    ],
+    "SAP_COOKIE_FILE": [
+      "Cookie ファイル",
+      "Netscape 形式の Cookie ファイルのパス (SSO の場合)。"
+    ],
+    "SAP_COOKIE_STRING": [
+      "Cookie 文字列",
+      "k=v; k2=v2 形式の Cookie (起動時にのみ読み込み)。"
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "SAP に送信するクライアント名。機密情報は入れないでください。"
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "データ プレビュー要求を圧縮",
+      "Web アプリケーション ファイアウォール (WAF) で問題が起きる場合のみ。"
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "サービス キー ファイル",
+      "BTP ABAP サービス キー (JSON) のパス。初回使用時にブラウザーでサインインします。"
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "サービス キー (JSON テキスト)",
+      "ファイルの代わりに JSON の内容そのもの。"
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "OAuth コールバック ポート",
+      "0 = 自動。"
+    ],
+    "ARC1_TOOL_MODE": [
+      "ツール モード",
+      "standard: 12 個のツール · hyperfocused: 1 個のツール (トークンが非常に少ない)。"
+    ],
+    "ARC1_SERVER_NAME": [
+      "サーバー名",
+      "MCP クライアントに表示される名前。システムごとに異なる名前を付けてください。"
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "システム ラベル",
+      "モデルに表示する 1 行の説明 (例: DEV 100)。最大 160 文字。"
+    ],
+    "ARC1_IDE_LINKS": [
+      "Eclipse リンク",
+      "eclipse: 応答に Eclipse ADT のリンクを追加します (システム ID が必要)。"
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "システム ID (SID)",
+      "実際の 3 文字の SAP SID、大文字 (例: DEV)。"
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "スキーマ互換性",
+      "Claude では auto で十分です。on: OpenAI / Azure の strict モード。"
+    ],
+    "ARC1_UI": [
+      "ブラウザー コンソール",
+      "ARC-1 の状態をブラウザーで表示する、試験的な読み取り専用ビューです。local: このコンピューターで起動します。"
+    ],
+    "ARC1_UI_OPEN": [
+      "起動時にコンソールを開く",
+      "ARC-1 の起動時にブラウザー コンソールを自動的に開きます。"
+    ],
+    "ARC1_UI_ADDR": [
+      "コンソールのアドレス",
+      "ブラウザー コンソールのアドレスとポートです。127.0.0.1 のままにする必要があります。"
+    ],
+    "ARC1_UI_PORT": [
+      "コンソールのポート",
+      "ブラウザー コンソールのアドレスのうち、ポートだけを変更します。"
+    ],
+    "ARC1_CACHE": [
+      "キャッシュ",
+      "auto · memory: メモリ · sqlite: ファイル · none: 無効。"
+    ],
+    "ARC1_CACHE_FILE": [
+      "キャッシュ ファイル",
+      "sqlite モードで使用するファイル パス。"
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "SAP 同時要求数",
+      "同時に送信する SAP 要求の最大数。"
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "データ応答の上限 (バイト)",
+      "1 回のデータ読み取りの最大バイト数 (既定 2 MB)。"
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "データ結果の同時処理数",
+      "同時に処理するデータ結果の最大数。"
+    ],
+    "ARC1_LOG_LEVEL": [
+      "ログ レベル",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "ログ形式",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "ログ ファイル",
+      "ログを書き込むファイルのフル パス。"
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "HTTP デバッグ ログ",
+      "要求と応答の詳細をログに追加します。機密性の高いヘッダーは隠されます。トラブルシューティング専用です。"
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "簡潔なエラー メッセージ",
+      "SAP エラーの詳細をモデルから隠します。"
+    ],
+    "SAP_VERBOSE": [
+      "詳細ログ",
+      "すべての HTTP 要求を記録します (ログ レベルは debug になります)。"
+    ],
+    "ARC1_PLUGINS": [
+      "拡張機能ファイル",
+      "拡張機能のフル パス、カンマ区切り (.js / .json)。"
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "拡張機能による ABAP 実行を許可",
+      "[書き込みを許可] もオンにする必要があります。"
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "拡張機能による OData / ICF 書き込みを許可",
+      "[書き込みを許可] もオンにする必要があります。"
+    ]
+  }
+}

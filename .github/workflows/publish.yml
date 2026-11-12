@@ -1,0 +1,50 @@
+name: Publish to npm
+
+# Runs when a GitHub release is published (tag vX.Y.Z = version in package.json).
+# Uses npm trusted publishing (OIDC, no token) when it is configured on npmjs.com,
+# otherwise the NPM_TOKEN repository secret.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: npm with trusted publishing support
+        run: npm install -g npm@latest
+      - run: npm ci
+      - run: npm test
+      - run: npm run check
+      - name: Tag matches package.json
+        if: github.event_name == 'release'
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
+      # The first version is published by hand (trusted publishing can only be set up
+      # for a package that already exists), so a release for it has nothing to publish.
+      - name: Skip a version that is already on npm
+        id: npm
+        run: |
+          spec=$(node -p "const p = require('./package.json'); p.name + '@' + p.version")
+          if [ -n "$(npm view "$spec" version 2>/dev/null)" ]; then
+            echo "::notice::$spec is already on npm, nothing to publish."
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.npm.outputs.published != 'true'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

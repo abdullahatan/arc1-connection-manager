@@ -1,0 +1,639 @@
+{
+  "arc1Version": "1.10.1",
+  "generatedFrom": "arc-1@1.10.1 (dist/)",
+  "env": {
+    "ARC1_ALLOWED_ORIGINS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "allowed-origins",
+      "description": "Comma-separated browser CORS origins"
+    },
+    "ARC1_ALLOW_HTTP_NO_AUTH": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-http-no-auth",
+      "description": "Allow unauthenticated HTTP MCP (true/false)"
+    },
+    "ARC1_API_KEYS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "api-keys",
+      "description": "MCP API keys (prefer ARC1_API_KEYS in CI)"
+    },
+    "ARC1_AUTH_RATE_LIMIT": {
+      "kind": "raw",
+      "default": null,
+      "flag": "auth-rate-limit",
+      "description": "OAuth requests per IP per minute"
+    },
+    "ARC1_CACHE": {
+      "kind": "string",
+      "default": "auto",
+      "flag": "cache",
+      "options": [
+        "auto",
+        "memory",
+        "sqlite",
+        "none"
+      ],
+      "description": "Cache mode: auto/memory/sqlite/none"
+    },
+    "ARC1_CACHE_FILE": {
+      "kind": "string",
+      "default": ".arc1-cache.db",
+      "flag": "cache-file",
+      "description": "SQLite cache file"
+    },
+    "ARC1_DCR_SIGNING_SECRET": {
+      "kind": "string",
+      "default": "",
+      "flag": "dcr-signing-secret",
+      "description": "OAuth DCR signing secret"
+    },
+    "ARC1_HTTP_ADDR": {
+      "kind": "raw",
+      "default": null
+    },
+    "ARC1_IDE_LINKS": {
+      "kind": "string",
+      "default": "off",
+      "flag": "ide-links",
+      "options": [
+        "off",
+        "eclipse"
+      ],
+      "description": "Eclipse source links: off (default) or eclipse; VS Code uses SAP ADT MCP"
+    },
+    "ARC1_IDE_SYSTEM_ID": {
+      "kind": "string",
+      "default": "",
+      "flag": "ide-system-id",
+      "description": "Real SAP SID for Eclipse links (single-target only)"
+    },
+    "ARC1_LOG_FILE": {
+      "kind": "string",
+      "default": "",
+      "flag": "log-file",
+      "description": "Audit/log output file"
+    },
+    "ARC1_LOG_FORMAT": {
+      "kind": "string",
+      "default": "text",
+      "flag": "log-format",
+      "options": [
+        "text",
+        "json"
+      ],
+      "description": "Log format: text or json"
+    },
+    "ARC1_LOG_HTTP_DEBUG": {
+      "kind": "raw",
+      "default": null
+    },
+    "ARC1_LOG_LEVEL": {
+      "kind": "string",
+      "default": "info",
+      "flag": "log-level",
+      "options": [
+        "info",
+        "debug",
+        "warn",
+        "error"
+      ],
+      "description": "Log level: debug/info/warn/error"
+    },
+    "ARC1_MAX_CONCURRENT": {
+      "kind": "raw",
+      "default": null,
+      "flag": "max-concurrent",
+      "description": "Maximum concurrent SAP requests"
+    },
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": {
+      "kind": "int",
+      "default": "2",
+      "flag": "max-concurrent-data-results",
+      "description": "Maximum concurrent data-result calls"
+    },
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": {
+      "kind": "int",
+      "default": "2097152",
+      "flag": "max-datapreview-response-bytes",
+      "description": "Cumulative data-preview response bytes per tool call"
+    },
+    "ARC1_MAX_HTTP_REQUEST_BYTES": {
+      "kind": "int",
+      "default": "102400",
+      "flag": "max-http-request-bytes",
+      "description": "MCP HTTP JSON body limit (1–16777216 bytes)"
+    },
+    "ARC1_MCP_HTTP_RATE_LIMIT": {
+      "kind": "raw",
+      "default": null
+    },
+    "ARC1_MINIMAL_ERRORS": {
+      "kind": "bool",
+      "default": null,
+      "flag": "minimal-errors",
+      "description": "Hide SAP diagnostic details (true/false)"
+    },
+    "ARC1_MULTI_TARGET_ALLOW_BASIC_AUTH": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "multi-target-allow-basic-auth",
+      "description": "Allow shared Basic multi-target identity (true/false)"
+    },
+    "ARC1_MULTI_TARGET_AUTHORIZATION": {
+      "kind": "raw",
+      "default": null,
+      "options": [
+        "standard",
+        "xsuaa-attribute"
+      ]
+    },
+    "ARC1_MULTI_TARGET_ENDPOINTS": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "multi-target-endpoints",
+      "description": "Enable multi-target endpoints (true/false)"
+    },
+    "ARC1_OAUTH_DCR_ENABLED": {
+      "kind": "bool",
+      "default": "true",
+      "flag": "oauth-dcr-enabled",
+      "description": "Allow new OAuth client registrations"
+    },
+    "ARC1_OAUTH_DCR_REDIRECT_URI_PATTERNS": {
+      "kind": "raw",
+      "default": null
+    },
+    "ARC1_OAUTH_DCR_TTL_SECONDS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "oauth-dcr-ttl-seconds",
+      "description": "OAuth DCR client lifetime"
+    },
+    "ARC1_PLUGINS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "plugins",
+      "description": "Comma-separated extension paths"
+    },
+    "ARC1_PORT": {
+      "kind": "raw",
+      "default": null,
+      "flag": "port",
+      "description": "HTTP transport port override"
+    },
+    "ARC1_PUBLIC_URL": {
+      "kind": "raw",
+      "default": null
+    },
+    "ARC1_RATE_LIMIT": {
+      "kind": "raw",
+      "default": null,
+      "flag": "rate-limit",
+      "description": "MCP calls per user per minute"
+    },
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": {
+      "kind": "string",
+      "default": "auto",
+      "flag": "schema-nullable-optionals",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "Optional-schema null mode: auto/on/off"
+    },
+    "ARC1_SERVER_NAME": {
+      "kind": "string",
+      "default": "arc-1",
+      "flag": "server-name",
+      "description": "MCP server name"
+    },
+    "ARC1_SYSTEM_LABEL": {
+      "kind": "string",
+      "default": "",
+      "flag": "system-label",
+      "description": "Connected-system label shown in MCP instructions"
+    },
+    "ARC1_TOOL_MODE": {
+      "kind": "string",
+      "default": "standard",
+      "flag": "tool-mode",
+      "options": [
+        "standard",
+        "hyperfocused"
+      ],
+      "description": "Tool mode: standard or hyperfocused"
+    },
+    "ARC1_UI": {
+      "kind": "raw",
+      "default": null,
+      "options": [
+        "off",
+        "local",
+        "web",
+        "true",
+        "false"
+      ]
+    },
+    "ARC1_UI_ADDR": {
+      "kind": "string",
+      "default": "127.0.0.1:8711",
+      "flag": "ui-addr",
+      "description": "Admin UI bind address"
+    },
+    "ARC1_UI_OPEN": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "ui-open",
+      "description": "Open the local admin UI in a browser (true/false)"
+    },
+    "ARC1_UI_PORT": {
+      "kind": "raw",
+      "default": null,
+      "flag": "ui-port",
+      "description": "Admin UI port override"
+    },
+    "SAP_ABAPLINT_CONFIG": {
+      "kind": "string",
+      "default": "",
+      "flag": "abaplint-config",
+      "description": "Custom abaplint configuration file"
+    },
+    "SAP_ABAP_RELEASE": {
+      "kind": "string",
+      "default": "",
+      "flag": "abap-release",
+      "description": "ABAP release override for abaplint"
+    },
+    "SAP_ALLOWED_PACKAGES": {
+      "kind": "raw",
+      "default": null,
+      "flag": "allowed-packages",
+      "description": "Comma-separated write package allowlist"
+    },
+    "SAP_ALLOWED_TRANSPORTS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "allowed-transports",
+      "description": "Comma-separated transport allowlist"
+    },
+    "SAP_ALLOW_DATA_PREVIEW": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-data-preview",
+      "description": "Enable table data preview, stored SAPscript texts and saved application logs (true/false)"
+    },
+    "SAP_ALLOW_FREE_SQL": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-free-sql",
+      "description": "Enable freestyle SQL (true/false)"
+    },
+    "SAP_ALLOW_GIT_WRITES": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-git-writes",
+      "description": "Enable Git mutations (true/false)"
+    },
+    "SAP_ALLOW_PLUGIN_EXECUTE": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-plugin-execute",
+      "description": "Enable plugin class/report execution (true/false)"
+    },
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-plugin-raw-writes",
+      "description": "Enable plugin non-ADT writes (true/false)"
+    },
+    "SAP_ALLOW_TRANSPORT_WRITES": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-transport-writes",
+      "description": "Enable transport mutations (true/false)"
+    },
+    "SAP_ALLOW_WRITES": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "allow-writes",
+      "description": "Enable SAP mutations (true/false)"
+    },
+    "SAP_BLOCKED_DATA_SOURCES": {
+      "kind": "raw",
+      "default": null
+    },
+    "SAP_BTP_DESTINATION": {
+      "kind": "raw",
+      "default": null
+    },
+    "SAP_BTP_OAUTH_CALLBACK_PORT": {
+      "kind": "string",
+      "default": "0",
+      "flag": "btp-oauth-callback-port",
+      "description": "BTP OAuth callback port"
+    },
+    "SAP_BTP_PP_DESTINATION": {
+      "kind": "raw",
+      "default": null
+    },
+    "SAP_BTP_SERVICE_KEY": {
+      "kind": "string",
+      "default": "",
+      "flag": "btp-service-key",
+      "description": "BTP ABAP service-key JSON"
+    },
+    "SAP_BTP_SERVICE_KEY_FILE": {
+      "kind": "string",
+      "default": "",
+      "flag": "btp-service-key-file",
+      "description": "BTP ABAP service-key file"
+    },
+    "SAP_CHECK_BEFORE_WRITE": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "check-before-write",
+      "description": "Run SAP syntax check before writes (true/false)"
+    },
+    "SAP_CLIENT": {
+      "kind": "string",
+      "default": "100",
+      "flag": "client",
+      "description": "SAP client"
+    },
+    "SAP_COOKIE_FILE": {
+      "kind": "string",
+      "default": "",
+      "flag": "cookie-file",
+      "description": "Netscape-format SAP cookie file"
+    },
+    "SAP_COOKIE_STRING": {
+      "kind": "string",
+      "default": "",
+      "flag": "cookie-string",
+      "description": "SAP Cookie header value"
+    },
+    "SAP_DENY_ACTIONS": {
+      "kind": "raw",
+      "default": null,
+      "flag": "deny-actions",
+      "description": "Action deny patterns or file path"
+    },
+    "SAP_DISABLE_SAML": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "disable-saml",
+      "description": "Disable SAP SAML redirects (true/false)"
+    },
+    "SAP_FEATURE_ABAPGIT": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-abapgit",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "abapGit feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_AMDP": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-amdp",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "AMDP feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_FLP": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-flp",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "FLP feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_GCTS": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-gcts",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "gCTS feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_HANA": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-hana",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "HANA feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_RAP": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-rap",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "RAP feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_TRANSPORT": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-transport",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "Transport feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_UI5": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-ui5",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "UI5 feature toggle: auto/on/off"
+    },
+    "SAP_FEATURE_UI5REPO": {
+      "kind": "feature",
+      "default": "auto",
+      "flag": "feature-ui5repo",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "description": "UI5 repository feature toggle: auto/on/off"
+    },
+    "SAP_GZIP_DATAPREVIEW_BODY": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "gzip-datapreview-body",
+      "description": "Gzip data-preview POST bodies for WAF compatibility (true/false)"
+    },
+    "SAP_HTTP_ADDR": {
+      "kind": "raw",
+      "default": null
+    },
+    "SAP_INSECURE": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "insecure",
+      "description": "Disable SAP TLS verification (true/false)"
+    },
+    "SAP_LANGUAGE": {
+      "kind": "string",
+      "default": "EN",
+      "flag": "language",
+      "description": "SAP logon and object master language"
+    },
+    "SAP_LINT_BEFORE_WRITE": {
+      "kind": "bool",
+      "default": "true",
+      "flag": "lint-before-write",
+      "description": "Lint before source writes (true/false)"
+    },
+    "SAP_OIDC_AUDIENCE": {
+      "kind": "string",
+      "default": "",
+      "flag": "oidc-audience",
+      "description": "OIDC audience"
+    },
+    "SAP_OIDC_CLOCK_TOLERANCE": {
+      "kind": "raw",
+      "default": null,
+      "flag": "oidc-clock-tolerance",
+      "description": "OIDC clock tolerance"
+    },
+    "SAP_OIDC_DISCOVERY": {
+      "kind": "bool",
+      "default": "true",
+      "flag": "oidc-discovery",
+      "description": "Enable OIDC discovery (true/false)"
+    },
+    "SAP_OIDC_ISSUER": {
+      "kind": "string",
+      "default": "",
+      "flag": "oidc-issuer",
+      "description": "OIDC issuer URL"
+    },
+    "SAP_OIDC_SCOPES": {
+      "kind": "raw",
+      "default": null,
+      "flag": "oidc-scopes",
+      "description": "OIDC scopes"
+    },
+    "SAP_PASSWORD": {
+      "kind": "string",
+      "default": "",
+      "flag": "password",
+      "description": "SAP password (prefer SAP_PASSWORD in CI)"
+    },
+    "SAP_PP_ALLOW_SHARED_COOKIES": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "pp-allow-shared-cookies",
+      "description": "Allow shared cookies beside principal propagation (true/false)"
+    },
+    "SAP_PP_ENABLED": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "pp-enabled",
+      "description": "Enable principal propagation (true/false)"
+    },
+    "SAP_PP_STRICT": {
+      "kind": "raw",
+      "default": null
+    },
+    "SAP_SYSTEM_TYPE": {
+      "kind": "string",
+      "default": "auto",
+      "flag": "system-type",
+      "options": [
+        "auto",
+        "btp",
+        "onprem"
+      ],
+      "description": "SAP system type: auto/btp/onprem"
+    },
+    "SAP_TRANSPORT": {
+      "kind": "string",
+      "default": "stdio",
+      "flag": "transport",
+      "options": [
+        "stdio",
+        "http-streamable"
+      ],
+      "description": "MCP transport: stdio or http-streamable"
+    },
+    "SAP_URL": {
+      "kind": "string",
+      "default": "",
+      "flag": "url",
+      "description": "SAP base URL"
+    },
+    "SAP_USER": {
+      "kind": "string",
+      "default": "",
+      "flag": "user",
+      "description": "SAP username (prefer SAP_USER in CI)"
+    },
+    "SAP_USER_AGENT": {
+      "kind": "string",
+      "default": "",
+      "flag": "user-agent",
+      "description": "Outbound SAP User-Agent (default: arc-1/version)"
+    },
+    "SAP_VERBOSE": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "verbose",
+      "description": "Enable verbose logging (true/false)"
+    },
+    "SAP_XSUAA_AUTH": {
+      "kind": "bool",
+      "default": "false",
+      "flag": "xsuaa-auth",
+      "description": "Enable XSUAA MCP authentication (true/false)"
+    }
+  },
+  "legacy": {
+    "SAP_READ_ONLY": "Replaced by SAP_ALLOW_WRITES (inverted). Set SAP_ALLOW_WRITES=true to enable writes.",
+    "SAP_BLOCK_DATA": "Replaced by SAP_ALLOW_DATA_PREVIEW (inverted). Set SAP_ALLOW_DATA_PREVIEW=true to enable table preview.",
+    "SAP_BLOCK_FREE_SQL": "Replaced by SAP_ALLOW_FREE_SQL (inverted). Set SAP_ALLOW_FREE_SQL=true to enable freestyle SQL.",
+    "SAP_ENABLE_TRANSPORTS": "Replaced by SAP_ALLOW_TRANSPORT_WRITES. Transport reads are always available; writes need SAP_ALLOW_TRANSPORT_WRITES=true + SAP_ALLOW_WRITES=true.",
+    "SAP_ENABLE_GIT": "Replaced by SAP_ALLOW_GIT_WRITES. Git reads are always available; writes need SAP_ALLOW_GIT_WRITES=true + SAP_ALLOW_WRITES=true.",
+    "SAP_ALLOWED_OPS": "Op-code allowlist was removed. Use SAP_DENY_ACTIONS for fine-grained per-action denials (e.g., SAP_DENY_ACTIONS=\"SAPWrite.delete,SAPManage.flp_*\").",
+    "SAP_DISALLOWED_OPS": "Op-code blocklist was removed. Use SAP_DENY_ACTIONS instead.",
+    "ARC1_PROFILE": "Server-side profile presets were removed. Set individual SAP_ALLOW_* flags (see .env.example for recipes).",
+    "ARC1_API_KEY": "Single API-key mode was removed. Use ARC1_API_KEYS=\"key:profile\" with a profile name (valid: viewer, viewer-data, viewer-sql, developer, developer-data, developer-sql, admin)."
+  },
+  "retired": {
+    "ARC1_CACHE_WARMUP": "Cache warmup was removed. The normal request-driven cache remains available through ARC1_CACHE.",
+    "ARC1_CACHE_WARMUP_PACKAGES": "Cache warmup package filters were removed with cache warmup. Remove this environment variable.",
+    "SAP_BTP_DESTINATIONS": "The unreleased multi-destination prototype was removed. Use ARC1_MULTI_TARGET_ENDPOINTS=true and mark subaccount destinations with arc1.enabled=true."
+  },
+  "ignored": {}
+}

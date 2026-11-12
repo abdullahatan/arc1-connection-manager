@@ -1,0 +1,47 @@
+name: Sync with ARC-1
+
+# Once a week: read the configuration code of the latest ARC-1 release from npm,
+# regenerate catalog/arc1.json and open a pull request when anything changed.
+on:
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Regenerate catalog/arc1.json from the latest ARC-1 release
+        run: node scripts/sync-arc1.mjs --npm latest --write --report sync-report.md
+      - name: Open or update a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- catalog/arc1.json; then
+            echo "ARC-1's configuration surface is unchanged."
+            exit 0
+          fi
+          version=$(node -p "require('./catalog/arc1.json').arc1Version")
+          branch="arc1-sync/$version"
+          title="Sync the setting catalog with ARC-1 $version"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add catalog/arc1.json
+          git commit -m "$title"
+          git push --force origin "$branch"
+          if gh pr view "$branch" > /dev/null 2>&1; then
+            gh pr edit "$branch" --body-file sync-report.md
+          elif ! gh pr create --head "$branch" --title "$title" --body-file sync-report.md; then
+            echo "::warning::Could not open a pull request. Allow GitHub Actions to create pull requests (Settings → Actions → General) – opening an issue instead."
+            gh issue create --title "$title" --body-file sync-report.md
+          fi

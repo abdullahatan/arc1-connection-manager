@@ -1,0 +1,51 @@
+{
+  "name": "arc1-connection-manager",
+  "version": "1.0.0",
+  "description": "Manage ARC-1 (SAP ADT MCP server) connections in .mcp.json: passwords in the OS credential store, settings checked by ARC-1 itself, catalog synced from ARC-1's source.",
+  "type": "module",
+  "bin": {
+    "arc1-connection-manager": "bin/arc1-connection-manager.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "public/",
+    "locales/",
+    "catalog/",
+    "LICENSE",
+    "README.md",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node bin/arc1-connection-manager.js",
+    "test": "node --test",
+    "check": "node scripts/sync-arc1.mjs --check && node scripts/check-locales.mjs",
+    "sync-arc1": "node scripts/sync-arc1.mjs --npm latest --write --check"
+  },
+  "dependencies": {
+    "@napi-rs/keyring": "^2.1.2"
+  },
+  "keywords": [
+    "arc-1",
+    "sap",
+    "abap",
+    "adt",
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "mcp-json"
+  ],
+  "author": "Abdullah Atan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahatan/arc1-connection-manager.git"
+  },
+  "homepage": "https://github.com/abdullahatan/arc1-connection-manager#readme",
+  "bugs": {
+    "url": "https://github.com/abdullahatan/arc1-connection-manager/issues"
+  }
+}

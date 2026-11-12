@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} · Node ${{ matrix.node }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Catalog matches ARC-1, all languages complete
+        run: npm run check
+      # The real credential store, not the test backend: save, read through the
+      # `run` wrapper, delete.
+      - name: Real credential store (Windows Credential Manager / macOS Keychain)
+        if: runner.os != 'Linux'
+        timeout-minutes: 5
+        env:
+          ARC1CM_REAL_KEYRING: '1'
+        run: node --test test/keyring-real.test.js
+      - name: Real credential store (GNOME Keyring via Secret Service)
+        if: runner.os == 'Linux'
+        timeout-minutes: 5
+        env:
+          ARC1CM_REAL_KEYRING: '1'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends gnome-keyring dbus >/dev/null
+          dbus-run-session -- sh -c 'echo -n ci | gnome-keyring-daemon --unlock --components=secrets >/dev/null && node --test test/keyring-real.test.js'

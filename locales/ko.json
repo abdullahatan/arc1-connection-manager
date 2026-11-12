@@ -1,0 +1,437 @@
+{
+  "name": "한국어",
+  "ui": {
+    "app.title": "ARC-1 MCP 연결 관리자",
+    "app.subtitle": "SAP ADT · MCP 설정",
+    "top.open": "파일 열기",
+    "top.open.tt": "기존 .mcp.json 파일 열기",
+    "top.new": "새 파일",
+    "top.new.tt": "샘플 연결이 포함된 새 .mcp.json 만들기",
+    "top.reload": "다시 불러오기",
+    "top.reload.tt": "디스크에서 파일을 다시 읽기",
+    "top.lang.tt": "앱 언어",
+    "top.light.tt": "밝은 테마",
+    "top.dark.tt": "어두운 테마",
+    "top.nofile": "선택된 파일 없음",
+    "top.file.tt": "클릭하여 다른 파일 열기",
+    "side.title": "연결",
+    "side.new": "새 연결",
+    "side.copy": "복제",
+    "side.copy.tt": "선택한 연결 복제",
+    "side.delete": "삭제",
+    "side.delete.tt": "선택한 연결 삭제",
+    "side.noaddr": "주소 미입력",
+    "side.legacy.tt": "ARC-1이 더 이상 허용하지 않는 설정이 있습니다. 수정이 필요합니다.",
+    "side.other": "기타 MCP 서버",
+    "side.other.tt": "ARC-1 서버가 아니며 변경되지 않고 유지됩니다",
+    "side.stored.tt": "암호가 운영 체제의 자격 증명 저장소에 있습니다",
+    "welcome.title": "환영합니다",
+    "welcome.text": "시작하려면 Claude Code가 사용하는 .mcp.json 파일을 열거나, 샘플 연결이 포함된 새 파일을 만드세요.",
+    "welcome.hint": "Claude Code는 실행된 프로젝트 폴더(예: Eclipse 워크스페이스)에서 .mcp.json을 찾습니다.",
+    "welcome.open": "기존 파일 열기",
+    "welcome.open.desc": "컴퓨터에서 .mcp.json 파일을 선택합니다.",
+    "welcome.new": "새 파일 만들기",
+    "welcome.new.desc": "ARC-1 샘플 연결이 포함된 .mcp.json을 만듭니다.",
+    "welcome.missing": "마지막으로 사용한 파일을 찾을 수 없습니다: {0}",
+    "welcome.recent": "최근 파일",
+    "welcome.shortcut": "바탕 화면 바로 가기 만들기",
+    "welcome.shortcut.tt": "이 앱을 npx로 시작하는 바로 가기를 추가합니다(바탕 화면 및 시작 메뉴)",
+    "empty.title": "아직 연결이 없습니다",
+    "empty.text": "왼쪽 아래의 [새 연결] 버튼으로 첫 번째 SAP 시스템을 추가하세요.",
+    "ed.name.tt": "클릭하여 연결 이름 바꾸기",
+    "ed.system": "시스템: {0}",
+    "ed.noaddr": "서버 주소가 아직 입력되지 않았습니다",
+    "ed.test": "연결 테스트",
+    "ed.test.tt": "SAP ADT 서비스에 로그인 시도",
+    "ed.validate": "ARC-1로 확인",
+    "ed.validate.tt": "이 연결이 사용하는 버전의 ARC-1이 직접 이 설정을 확인하게 합니다",
+    "ed.conn": "SAP 연결",
+    "ed.settings": "설정",
+    "ed.settings.desc": "추가한 설정만 파일에 기록됩니다. 나머지는 ARC-1 기본값이 적용됩니다.",
+    "ed.add": "설정 추가",
+    "ed.advanced": "고급",
+    "ed.cmd": "시작 명령",
+    "ed.cmd.help": "MCP 클라이언트가 ARC-1을 시작하는 방법입니다. 버전을 고정하려면 arc-1 대신 arc-1@1.10.1을 입력하세요.",
+    "ed.cmd.written": "파일에 다음과 같이 기록됩니다:",
+    "other.title": "ARC-1 서버가 아님",
+    "other.text": "이 항목은 다른 MCP 서버의 것입니다. 저장할 때 그대로 유지됩니다.",
+    "other.cmd": "명령",
+    "f.url": "서버 주소",
+    "f.url.help": "프로토콜과 포트 포함, 예: https://sap-host:44300",
+    "f.user": "사용자",
+    "f.user.help": "SAP 사용자 이름입니다.",
+    "f.pwd": "암호",
+    "f.pwd.help": "파일에 일반 텍스트로 저장됩니다.",
+    "f.pwd.help.store": "{0}에 암호화되어 저장됩니다. 파일에는 암호가 없습니다.",
+    "f.client": "클라이언트",
+    "f.client.help": "3자리. 비워 두면 100이 사용됩니다.",
+    "f.lang": "언어",
+    "f.lang.help": "비워 두면 EN. 새로 만든 오브젝트의 원본 언어이기도 합니다.",
+    "pwd.show": "암호 표시",
+    "pwd.hide": "암호 숨기기",
+    "pwd.mode.store": "자격 증명 저장소",
+    "pwd.mode.file": "파일에",
+    "pwd.mode.store.tt": "권장: 운영 체제가 암호를 암호화하여 보관합니다. .mcp.json은 이 앱을 통해서만 ARC-1을 시작합니다.",
+    "pwd.mode.file.tt": ".mcp.json에 일반 텍스트로 저장됩니다. 어디서나 작동하지만 파일을 읽을 수 있는 사람은 암호도 읽을 수 있습니다.",
+    "pwd.na": "이 컴퓨터에서는 자격 증명 저장소를 사용할 수 없습니다: {0}",
+    "pwd.ph.stored": "자격 증명 저장소에 저장됨",
+    "pwd.ph.none": "아직 저장되지 않음 – 암호를 입력하세요",
+    "store.windows": "Windows 자격 증명 관리자",
+    "store.macos": "macOS 키체인",
+    "store.linux": "Secret Service(GNOME Keyring / KWallet)",
+    "set.on": "켬",
+    "set.off": "끔",
+    "set.default": "기본값: {0}",
+    "set.empty": "비어 있음",
+    "set.default.tt": "기본값",
+    "set.invalid.bool": "잘못된 값 '{0}'; ARC-1은 이를 끔으로 처리합니다.",
+    "set.invalid.enum": "잘못된 값 '{0}'; ARC-1은 기본값을 사용합니다.",
+    "set.invalid.int": "'{0}'은(는) 정수가 아닙니다.",
+    "set.invalid.range": "허용 범위: {0}–{1}.",
+    "set.invalid.pattern": "'{0}'의 형식이 올바르지 않습니다.",
+    "set.invalid.length": "최대 {0}자입니다.",
+    "set.invalid.list": "빈 항목이 있습니다(쉼표 두 개가 연속됨).",
+    "set.fatal": "이 값으로는 ARC-1이 시작되지 않습니다.",
+    "set.remove.tt": "이 설정 제거(ARC-1 기본값 적용)",
+    "set.browse.tt": "파일 선택",
+    "set.none": "추가 설정이 없습니다. ARC-1은 모든 기본값으로 실행됩니다: 읽기 전용, $TMP 패키지만.",
+    "set.legacy.title": "제거된 설정",
+    "set.legacy.help": "이 설정이 있으면 ARC-1이 시작되지 않습니다.",
+    "set.legacy.use": "대신 '{0}'({1})을(를) 사용하세요.",
+    "set.legacy.inverted": "의미가 반대입니다.",
+    "set.legacy.current": "현재 값: {0}",
+    "set.legacy.convert": "변환: {0}",
+    "set.arc1says": "ARC-1 메시지: {0}",
+    "legacy.denyactions": "대신 '금지된 작업'(SAP_DENY_ACTIONS)을 사용하세요.",
+    "legacy.profile": "프로필이 제거되었습니다. 권한을 하나씩 추가하세요.",
+    "legacy.apikey": "제거됨(ARC1_API_KEYS는 HTTP 모드에서만 사용).",
+    "legacy.removed": "제거됨.",
+    "set.unknown.title": "알 수 없는 설정",
+    "set.unknown.help": "ARC-1이 이 설정을 알지 못하므로 무시됩니다.",
+    "set.unknown.typo": "{0}을(를) 말씀하신 건가요?",
+    "set.unknown.rename": "{0}(으)로 이름 바꾸기",
+    "set.ignored.title": "무시되는 설정",
+    "set.ignored.help": "ARC-1은 이 설정을 무시합니다. 제거해도 됩니다.",
+    "set.server.title": "서버 설정",
+    "set.server.help": "주로 ARC-1을 공유 HTTP / BTP 서버로 실행할 때 사용합니다.",
+    "grp.legacy": "수정이 필요한 설정",
+    "grp.other": "기타",
+    "feat.help": "auto: 시스템이 지원하면 사용 · on: 강제 사용 · off: 사용 안 함.",
+    "issue.cmdwin": "Windows에서 Claude Code는 cmd /c를 통해서만 npx를 시작할 수 있습니다.",
+    "issue.fix": "수정",
+    "add.title": "설정 추가",
+    "add.hint": "이름, 키 또는 설명으로 검색하세요. ↑ ↓로 이동하고 Enter 또는 두 번 클릭으로 추가합니다.",
+    "add.nomatch": "아직 추가되지 않은 일치하는 설정이 없습니다.",
+    "dlg.close.tt": "닫기 (Esc)",
+    "dlg.ok": "확인",
+    "dlg.cancel": "취소",
+    "dlg.yes": "예",
+    "dlg.no": "아니요",
+    "dlg.save": "저장",
+    "dlg.dontsave": "저장 안 함",
+    "dlg.overwrite": "덮어쓰기",
+    "dlg.reload": "다시 불러오기",
+    "dlg.saveanyway": "그래도 저장",
+    "dlg.replace": "바꾸기",
+    "dlg.openit": "열기",
+    "lang.title": "언어",
+    "foot.save": "저장",
+    "foot.save.tt": "저장 (Ctrl+S)",
+    "foot.dirty": "저장하지 않은 변경 사항",
+    "st.loaded": "연결 {0}개를 불러왔습니다.",
+    "st.legacy": "{0}: ARC-1이 더 이상 허용하지 않는 이전 설정이 있습니다. 연결을 열고 '변환'을 클릭하세요.",
+    "st.saved": "{0}에 저장했습니다. 백업: {1}. 변경 사항을 적용하려면 Claude Code를 다시 시작하세요.",
+    "st.removed": "{0}을(를) 제거했습니다(저장하는 것을 잊지 마세요)",
+    "st.converted": "{0} → {1} = {2} 변환됨(저장하는 것을 잊지 마세요)",
+    "st.added": "'{0}'을(를) 추가했습니다(저장하는 것을 잊지 마세요)",
+    "st.newconn": "새 연결을 추가했습니다: {0}(저장하는 것을 잊지 마세요)",
+    "st.copied": "'{0}' 복제됨 → {1}(저장하는 것을 잊지 마세요)",
+    "st.deleted": "'{0}'을(를) 삭제했습니다(저장하는 것을 잊지 마세요)",
+    "st.created": "새 파일을 만들었습니다: {0}",
+    "st.renamed": "'{0}'의 이름을 '{1}'(으)로 바꿨습니다(저장하는 것을 잊지 마세요)",
+    "st.reloaded": "디스크에서 다시 불러왔습니다.",
+    "st.shortcut": "바로 가기를 만들었습니다: {0}",
+    "msg.name.empty": "연결 이름은 비워 둘 수 없습니다.",
+    "msg.name.exists": "이름이 '{0}'인 연결이 이미 있습니다.",
+    "msg.read.fail": "파일을 읽을 수 없습니다:\n{0}",
+    "msg.legacy.save": "다음 연결에는 ARC-1이 더 이상 허용하지 않는 설정이 있습니다:\n\n{0}\n\n이 상태로는 ARC-1이 시작되지 않습니다. 그래도 저장하시겠습니까?",
+    "msg.save.fail": "저장할 수 없습니다:\n{0}",
+    "msg.unsaved": "저장하지 않은 변경 사항이 있습니다. 저장하시겠습니까?",
+    "msg.delete": "연결 '{0}'을(를) 삭제하시겠습니까?",
+    "msg.url.first": "먼저 서버 주소를 입력하세요.",
+    "msg.conflict": "파일을 연 뒤 이 앱 밖에서 파일이 변경되었습니다. 그 변경 내용을 덮어쓸까요, 아니면 파일을 다시 불러와 내 변경 내용을 버릴까요?",
+    "msg.exists": "{0}이(가) 이미 있습니다. 열까요, 아니면 새 샘플 파일로 바꿀까요? (이전 파일은 .bak으로 보관됩니다.)",
+    "msg.store.fail": "운영 체제의 자격 증명 저장소에 액세스할 수 없습니다:\n{0}",
+    "msg.store.need": "'{0}': 먼저 서버 주소와 사용자를 입력하세요. 저장된 암호는 이 둘에 연결됩니다.",
+    "msg.pwd.missing": "'{0}': 자격 증명 저장소에 아직 암호가 없습니다. 먼저 암호를 입력하세요.",
+    "msg.pwd.confirm": "다음 연결에는 아직 저장된 암호가 없습니다: {0}. 암호를 입력할 때까지 ARC-1은 SAP에 로그인할 수 없습니다. 그래도 저장할까요?",
+    "msg.jsonc": "이 파일에는 주석이 있습니다. 저장하면 일반 JSON으로 다시 쓰여 주석이 사라집니다. 계속할까요?",
+    "msg.notjson": ".json 파일만 열 수 있습니다.",
+    "msg.unexpected": "문제가 발생했습니다:\n{0}",
+    "msg.lost": "앱과의 연결이 끊어졌습니다. 앱의 터미널을 닫았다면 다음 명령으로 다시 시작하세요: npx arc1-connection-manager",
+    "msg.bye": "앱이 종료되었습니다. 이 창을 닫아도 됩니다.",
+    "msg.shortcut.fail": "바로 가기를 만들 수 없습니다:\n{0}",
+    "ban.changed": "이 파일이 앱 밖에서 변경되었습니다.",
+    "ban.missing": "이 파일이 디스크에 더 이상 없습니다. 저장하면 다시 만들어집니다.",
+    "ban.reload": "다시 불러오기",
+    "ban.keep": "내 버전 유지",
+    "test.title": "연결 테스트",
+    "test.running": "연결을 테스트하는 중…",
+    "test.ok": "연결 성공(HTTP {0}). ADT 서비스에 접속할 수 있습니다.",
+    "test.401": "사용자 이름 또는 암호가 잘못되었습니다(HTTP 401).",
+    "test.403": "로그인했지만 ADT 권한이 없습니다(HTTP 403).",
+    "test.404": "ADT 서비스를 찾을 수 없습니다(HTTP 404). SICF에서 /sap/bc/adt가 활성화되어 있나요?",
+    "test.redirect": "서버가 로그인 페이지로 리디렉션했습니다(HTTP {0}). SAML / SSO가 켜져 있을 수 있습니다. 'SAML 리디렉션 사용 안 함'을 시도해 보세요.",
+    "test.other": "서버가 HTTP {0}을(를) 반환했습니다.",
+    "test.fail": "연결할 수 없습니다:\n{0}",
+    "test.ssl": "서버 인증서를 신뢰할 수 없습니다:\n{0}\n\n자체 서명 인증서라면 [설정 추가]에서 'SSL 검증 건너뛰기'를 추가하세요.",
+    "test.notfound": "서버를 찾을 수 없습니다: {0}. 주소와 네트워크 / VPN을 확인하세요.",
+    "test.refused": "{0}이(가) 연결을 거부했습니다. 포트를 확인하세요.",
+    "test.timeout": "15초 안에 응답이 없습니다. 주소와 네트워크 / VPN을 확인하세요.",
+    "test.badurl": "서버 주소는 http:// 또는 https://로 시작해야 합니다.",
+    "val.title": "ARC-1 확인",
+    "val.running": "ARC-1이 설정을 확인하는 중입니다… 처음에는 npx가 ARC-1을 내려받느라 1분 정도 걸릴 수 있습니다.",
+    "val.ok": "ARC-1 {0}이(가) 이 설정을 허용합니다.",
+    "val.fail": "이 설정으로는 ARC-1 {0}이(가) 시작되지 않습니다:",
+    "val.error": "ARC-1을 실행할 수 없습니다:",
+    "val.timeout": "ARC-1이 제시간에 응답하지 않았습니다. npm 레지스트리로의 네트워크 연결을 확인하세요.",
+    "val.nonpx": "npx를 찾을 수 없습니다. ARC-1에는 Node.js가 필요합니다. nodejs.org에서 설치하세요.",
+    "val.policy": "유효한 권한",
+    "val.writes": "쓰기",
+    "val.packages": "쓰기 가능한 패키지",
+    "val.transports": "전송 요청 쓰기",
+    "val.git": "Git 쓰기",
+    "val.data": "테이블 데이터 미리 보기",
+    "val.sql": "자유 SQL",
+    "val.deny": "금지된 작업",
+    "val.sources": "차단된 데이터 소스",
+    "val.allowed": "허용",
+    "val.blocked": "차단",
+    "val.none": "없음",
+    "val.warnings": "ARC-1 경고",
+    "fb.open.title": "MCP 구성 열기",
+    "fb.new.title": "새 파일 만들기",
+    "fb.pick.title": "파일 선택",
+    "fb.places": "위치",
+    "fb.cwd": "현재 폴더",
+    "fb.home": "홈",
+    "fb.desktop": "바탕 화면",
+    "fb.documents": "문서",
+    "fb.workspace": "Eclipse 작업 영역",
+    "fb.claude": "Claude Desktop 구성",
+    "fb.recent": "최근 항목",
+    "fb.drives": "내 PC",
+    "fb.up": "한 단계 위로",
+    "fb.go": "이동",
+    "fb.path": "경로",
+    "fb.empty": "여기에는 폴더나 .json 파일이 없습니다.",
+    "fb.open": "열기",
+    "fb.create": "여기에 만들기",
+    "fb.select": "선택",
+    "fb.filename": "파일 이름",
+    "fb.err": "이 폴더를 열 수 없습니다:\n{0}",
+    "fb.hint.open": ".mcp.json 또는 claude_desktop_config.json 같은 다른 MCP 구성을 선택하세요.",
+    "fb.hint.new": "Claude Code를 시작하는 프로젝트 폴더를 선택하세요. 파일이 그곳에 만들어집니다."
+  },
+  "groups": {
+    "perm": "권한",
+    "quality": "코드 품질",
+    "conn": "연결(고급)",
+    "btp": "BTP",
+    "feat": "기능 감지",
+    "tools": "도구",
+    "perf": "성능",
+    "log": "로그",
+    "plugins": "확장"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "쓰기 허용",
+      "오브젝트 생성, 변경, 삭제 및 활성화. 끄면 ARC-1은 읽기만 합니다."
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "쓰기 가능한 패키지",
+      "쉼표로 구분: ZFOO(정확히), Z*(접두사), ZFOO/**(하위 패키지 포함), *(전체)."
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "전송 쓰기",
+      "전송 요청 생성 / 릴리스. [쓰기 허용]도 켜져 있어야 합니다."
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "허용된 전송 요청",
+      "이 요청에만 씁니다. 쉼표로 구분(예: DEVK900123). 비어 있으면 제한 없음."
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Git 쓰기(abapGit / gCTS)",
+      "Push, Pull 등. [쓰기 허용]도 켜져 있어야 합니다."
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "테이블 데이터 미리 보기",
+      "SE16처럼 테이블 / CDS 데이터를 읽습니다."
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "자유 SQL",
+      "직접 작성한 SELECT 쿼리를 실행합니다."
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "차단된 데이터 원본",
+      "데이터를 읽으면 안 되는 테이블 / CDS 이름, 쉼표로 구분(실험적)."
+    ],
+    "SAP_DENY_ACTIONS": [
+      "금지된 작업",
+      "개별적으로 끌 작업, 쉼표로 구분. 예: SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "쓰기 전 abaplint",
+      "소스 코드를 SAP에 쓰기 전에 abaplint를 실행합니다."
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "쓰기 전 SAP 구문 검사",
+      "SAP 측 구문 검사(경고만 하며 차단하지 않음)."
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "abaplint 구성 파일",
+      "사용자 지정 abaplint.json의 전체 경로."
+    ],
+    "SAP_INSECURE": [
+      "SSL 검증 건너뛰기",
+      "자체 서명 인증서를 사용하는 시스템용."
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "시스템 유형",
+      "auto: 자동 감지 · onprem: 온프레미스 · btp: BTP ABAP Environment."
+    ],
+    "SAP_ABAP_RELEASE": [
+      "ABAP 릴리스",
+      "abaplint용 SAP_BASIS 릴리스(예: 758). 보통 자동으로 감지됩니다."
+    ],
+    "SAP_DISABLE_SAML": [
+      "SAML 리디렉션 사용 안 함",
+      "Basic 로그인이 SAML 리디렉션에서 멈출 때. BTP / S/4 Cloud에서는 사용하지 마세요."
+    ],
+    "SAP_COOKIE_FILE": [
+      "쿠키 파일",
+      "Netscape 형식 쿠키 파일 경로(SSO 시나리오)."
+    ],
+    "SAP_COOKIE_STRING": [
+      "쿠키 문자열",
+      "k=v; k2=v2 형식의 쿠키(시작 시에만 읽음)."
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "SAP로 보내는 클라이언트 이름. 비밀 정보를 넣지 마세요."
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "데이터 미리 보기 요청 압축",
+      "웹 애플리케이션 방화벽(WAF)이 문제를 일으킬 때만."
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "서비스 키 파일",
+      "BTP ABAP 서비스 키(JSON) 경로. 처음 사용할 때 브라우저 로그인이 열립니다."
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "서비스 키(JSON 텍스트)",
+      "파일 대신 JSON 내용 자체."
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "OAuth 콜백 포트",
+      "0 = 자동."
+    ],
+    "ARC1_TOOL_MODE": [
+      "도구 모드",
+      "standard: 도구 12개 · hyperfocused: 도구 1개(토큰 매우 적음)."
+    ],
+    "ARC1_SERVER_NAME": [
+      "서버 이름",
+      "MCP 클라이언트에 표시되는 이름. 시스템마다 다른 이름을 지정하세요."
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "시스템 레이블",
+      "모델에 표시되는 한 줄 설명(예: DEV 100). 최대 160자."
+    ],
+    "ARC1_IDE_LINKS": [
+      "Eclipse 링크",
+      "eclipse: 응답에 Eclipse ADT 링크를 추가합니다(시스템 ID 필요)."
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "시스템 ID(SID)",
+      "실제 3자리 SAP SID, 대문자(예: DEV)."
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "스키마 호환성",
+      "Claude에는 auto로 충분합니다. on: OpenAI / Azure strict 모드."
+    ],
+    "ARC1_UI": [
+      "브라우저 콘솔",
+      "브라우저에서 ARC-1의 상태를 보여 주는 실험적인 읽기 전용 보기입니다. local: 이 컴퓨터에서 시작합니다."
+    ],
+    "ARC1_UI_OPEN": [
+      "시작 시 콘솔 열기",
+      "ARC-1이 시작되면 브라우저 콘솔을 자동으로 엽니다."
+    ],
+    "ARC1_UI_ADDR": [
+      "콘솔 주소",
+      "브라우저 콘솔의 주소와 포트입니다. 127.0.0.1로 유지해야 합니다."
+    ],
+    "ARC1_UI_PORT": [
+      "콘솔 포트",
+      "브라우저 콘솔 주소의 포트만 바꿉니다."
+    ],
+    "ARC1_CACHE": [
+      "캐시",
+      "auto · memory: 메모리 · sqlite: 파일 · none: 끔."
+    ],
+    "ARC1_CACHE_FILE": [
+      "캐시 파일",
+      "sqlite 모드에서 사용할 파일 경로."
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "동시 SAP 요청 수",
+      "동시에 보내는 SAP 요청의 최대 수."
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "데이터 응답 한도(바이트)",
+      "데이터 읽기 1회당 최대 바이트(기본 2MB)."
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "동시 데이터 결과 수",
+      "동시에 처리하는 데이터 결과의 최대 수."
+    ],
+    "ARC1_LOG_LEVEL": [
+      "로그 수준",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "로그 형식",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "로그 파일",
+      "로그를 기록할 파일의 전체 경로."
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "HTTP 디버그 로그",
+      "요청과 응답의 세부 정보를 로그에 추가합니다. 민감한 헤더는 숨겨집니다. 문제 해결용으로만 사용하세요."
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "간단한 오류 메시지",
+      "SAP 오류 세부 정보를 모델에 표시하지 않습니다."
+    ],
+    "SAP_VERBOSE": [
+      "자세한 로그",
+      "모든 HTTP 요청을 기록합니다(로그 수준이 debug가 됨)."
+    ],
+    "ARC1_PLUGINS": [
+      "확장 파일",
+      "확장의 전체 경로, 쉼표로 구분(.js / .json)."
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "확장의 ABAP 실행 허용",
+      "[쓰기 허용]도 켜져 있어야 합니다."
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "확장의 OData / ICF 쓰기 허용",
+      "[쓰기 허용]도 켜져 있어야 합니다."
+    ]
+  }
+}

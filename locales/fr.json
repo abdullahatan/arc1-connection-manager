@@ -1,0 +1,437 @@
+{
+  "name": "Français",
+  "ui": {
+    "app.title": "Gestionnaire de connexions ARC-1 MCP",
+    "app.subtitle": "SAP ADT · paramètres MCP",
+    "top.open": "Ouvrir un fichier",
+    "top.open.tt": "Ouvrir un fichier .mcp.json existant",
+    "top.new": "Nouveau fichier",
+    "top.new.tt": "Créer un nouveau .mcp.json avec une connexion d'exemple",
+    "top.reload": "Recharger",
+    "top.reload.tt": "Relire le fichier depuis le disque",
+    "top.lang.tt": "Langue de l'application",
+    "top.light.tt": "Thème clair",
+    "top.dark.tt": "Thème sombre",
+    "top.nofile": "Aucun fichier sélectionné",
+    "top.file.tt": "Cliquez pour ouvrir un autre fichier",
+    "side.title": "Connexions",
+    "side.new": "Nouvelle connexion",
+    "side.copy": "Dupliquer",
+    "side.copy.tt": "Dupliquer la connexion sélectionnée",
+    "side.delete": "Supprimer",
+    "side.delete.tt": "Supprimer la connexion sélectionnée",
+    "side.noaddr": "Pas encore d'adresse",
+    "side.legacy.tt": "Contient un paramètre qu'ARC-1 n'accepte plus ; à corriger.",
+    "side.other": "Autres serveurs MCP",
+    "side.other.tt": "Pas un serveur ARC-1 ; conservé tel quel",
+    "side.stored.tt": "Le mot de passe est dans le magasin d'identifiants du système",
+    "welcome.title": "Bienvenue",
+    "welcome.text": "Pour commencer, ouvrez le fichier .mcp.json utilisé par Claude Code ou créez-en un nouveau avec une connexion d'exemple.",
+    "welcome.hint": "Claude Code recherche .mcp.json dans le dossier de projet où il est lancé (par exemple votre workspace Eclipse).",
+    "welcome.open": "Ouvrir un fichier existant",
+    "welcome.open.desc": "Choisissez un fichier .mcp.json sur votre ordinateur.",
+    "welcome.new": "Créer un nouveau fichier",
+    "welcome.new.desc": "Créer un .mcp.json avec une connexion ARC-1 d'exemple.",
+    "welcome.missing": "Le dernier fichier utilisé est introuvable : {0}",
+    "welcome.recent": "Fichiers récents",
+    "welcome.shortcut": "Créer un raccourci sur le bureau",
+    "welcome.shortcut.tt": "Ajoute un raccourci qui lance cette application avec npx (bureau et menu Démarrer)",
+    "empty.title": "Aucune connexion",
+    "empty.text": "Ajoutez votre premier système SAP avec le bouton Nouvelle connexion en bas à gauche.",
+    "ed.name.tt": "Cliquez pour renommer la connexion",
+    "ed.system": "Système : {0}",
+    "ed.noaddr": "Adresse du serveur non encore saisie",
+    "ed.test": "Tester la connexion",
+    "ed.test.tt": "Essayer de se connecter au service SAP ADT",
+    "ed.validate": "Vérifier avec ARC-1",
+    "ed.validate.tt": "Faire vérifier ces paramètres par ARC-1 lui-même, avec la version d'ARC-1 utilisée par cette connexion",
+    "ed.conn": "Connexion SAP",
+    "ed.settings": "Paramètres",
+    "ed.settings.desc": "Seuls les paramètres ajoutés sont écrits dans le fichier. Les valeurs par défaut d'ARC-1 s'appliquent au reste.",
+    "ed.add": "Ajouter un paramètre",
+    "ed.advanced": "Avancé",
+    "ed.cmd": "Commande de démarrage",
+    "ed.cmd.help": "Comment le client MCP lance ARC-1. Pour fixer une version, écrivez arc-1@1.10.1 au lieu de arc-1.",
+    "ed.cmd.written": "Écrit dans le fichier ainsi :",
+    "other.title": "Pas un serveur ARC-1",
+    "other.text": "Cette entrée appartient à un autre serveur MCP. Elle est conservée telle quelle lors de l'enregistrement.",
+    "other.cmd": "Commande",
+    "f.url": "Adresse du serveur",
+    "f.url.help": "Avec protocole et port, par ex. https://sap-host:44300",
+    "f.user": "Utilisateur",
+    "f.user.help": "Votre nom d'utilisateur SAP.",
+    "f.pwd": "Mot de passe",
+    "f.pwd.help": "Stocké en clair dans le fichier.",
+    "f.pwd.help.store": "Chiffré dans {0}. Le fichier ne contient aucun mot de passe.",
+    "f.client": "Mandant",
+    "f.client.help": "3 chiffres. 100 si vide.",
+    "f.lang": "Langue",
+    "f.lang.help": "EN si vide. C'est aussi la langue d'origine des nouveaux objets.",
+    "pwd.show": "Afficher le mot de passe",
+    "pwd.hide": "Masquer le mot de passe",
+    "pwd.mode.store": "Magasin sécurisé",
+    "pwd.mode.file": "Dans le fichier",
+    "pwd.mode.store.tt": "Recommandé : le système d'exploitation conserve le mot de passe chiffré ; .mcp.json lance ARC-1 uniquement via cette application.",
+    "pwd.mode.file.tt": "En clair dans .mcp.json. Fonctionne partout, mais quiconque peut lire le fichier peut lire le mot de passe.",
+    "pwd.na": "Le magasin d'identifiants n'est pas disponible sur cet ordinateur : {0}",
+    "pwd.ph.stored": "Enregistré dans le magasin d'identifiants",
+    "pwd.ph.none": "Pas encore enregistré – saisissez le mot de passe",
+    "store.windows": "le Gestionnaire d'identification Windows",
+    "store.macos": "le trousseau macOS",
+    "store.linux": "le Secret Service (GNOME Keyring / KWallet)",
+    "set.on": "Activé",
+    "set.off": "Désactivé",
+    "set.default": "Par défaut : {0}",
+    "set.empty": "vide",
+    "set.default.tt": "Par défaut",
+    "set.invalid.bool": "Valeur non valide '{0}' ; ARC-1 la considère comme désactivée.",
+    "set.invalid.enum": "Valeur non valide '{0}' ; ARC-1 utilise la valeur par défaut.",
+    "set.invalid.int": "« {0} » n'est pas un nombre entier.",
+    "set.invalid.range": "Plage autorisée : {0}–{1}.",
+    "set.invalid.pattern": "« {0} » n'a pas le format attendu.",
+    "set.invalid.length": "{0} caractères au maximum.",
+    "set.invalid.list": "Contient une entrée vide (deux virgules à la suite).",
+    "set.fatal": "ARC-1 ne démarrera pas avec cette valeur.",
+    "set.remove.tt": "Supprimer ce paramètre (la valeur par défaut d'ARC-1 s'applique)",
+    "set.browse.tt": "Choisir un fichier",
+    "set.none": "Aucun paramètre supplémentaire. ARC-1 fonctionne avec toutes les valeurs par défaut : lecture seule, paquet $TMP uniquement.",
+    "set.legacy.title": "Paramètre supprimé",
+    "set.legacy.help": "ARC-1 ne démarre pas tant que ce paramètre est présent.",
+    "set.legacy.use": "Utilisez plutôt '{0}' ({1}).",
+    "set.legacy.inverted": "Le sens est inversé.",
+    "set.legacy.current": "Valeur actuelle : {0}",
+    "set.legacy.convert": "Convertir : {0}",
+    "set.arc1says": "Message d'ARC-1 : {0}",
+    "legacy.denyactions": "Utilisez plutôt 'Actions interdites' (SAP_DENY_ACTIONS).",
+    "legacy.profile": "Les profils ont été supprimés ; ajoutez les autorisations une par une.",
+    "legacy.apikey": "Supprimé (ARC1_API_KEYS n'est utilisé qu'en mode HTTP).",
+    "legacy.removed": "Supprimé.",
+    "set.unknown.title": "Paramètre non reconnu",
+    "set.unknown.help": "ARC-1 ne connaît pas ce paramètre et l'ignore donc.",
+    "set.unknown.typo": "Vouliez-vous dire {0} ?",
+    "set.unknown.rename": "Renommer en {0}",
+    "set.ignored.title": "Paramètre ignoré",
+    "set.ignored.help": "ARC-1 ignore ce paramètre. Vous pouvez le supprimer.",
+    "set.server.title": "Paramètre serveur",
+    "set.server.help": "Surtout utilisé quand ARC-1 fonctionne comme serveur HTTP / BTP partagé.",
+    "grp.legacy": "Paramètres à corriger",
+    "grp.other": "Autres",
+    "feat.help": "auto : activé si le système le prend en charge · on : forcer · off : désactiver.",
+    "issue.cmdwin": "Sous Windows, Claude Code ne peut lancer npx que via cmd /c.",
+    "issue.fix": "Corriger",
+    "add.title": "Ajouter un paramètre",
+    "add.hint": "Recherchez par nom, clé ou description. ↑ ↓ pour naviguer, Entrée ou double-clic pour ajouter.",
+    "add.nomatch": "Aucun paramètre correspondant non encore ajouté.",
+    "dlg.close.tt": "Fermer (Échap)",
+    "dlg.ok": "OK",
+    "dlg.cancel": "Annuler",
+    "dlg.yes": "Oui",
+    "dlg.no": "Non",
+    "dlg.save": "Enregistrer",
+    "dlg.dontsave": "Ne pas enregistrer",
+    "dlg.overwrite": "Écraser",
+    "dlg.reload": "Recharger",
+    "dlg.saveanyway": "Enregistrer quand même",
+    "dlg.replace": "Remplacer",
+    "dlg.openit": "L'ouvrir",
+    "lang.title": "Langue",
+    "foot.save": "Enregistrer",
+    "foot.save.tt": "Enregistrer (Ctrl+S)",
+    "foot.dirty": "Modifications non enregistrées",
+    "st.loaded": "{0} connexion(s) chargée(s).",
+    "st.legacy": "{0} : contient d'anciens paramètres qu'ARC-1 n'accepte plus. Ouvrez la connexion et cliquez sur 'Convertir'.",
+    "st.saved": "Enregistré à {0}. Sauvegarde : {1}. Redémarrez Claude Code pour appliquer les modifications.",
+    "st.removed": "{0} supprimé (pensez à enregistrer)",
+    "st.converted": "{0} → {1} = {2} converti (pensez à enregistrer)",
+    "st.added": "'{0}' ajouté (pensez à enregistrer)",
+    "st.newconn": "Nouvelle connexion ajoutée : {0} (pensez à enregistrer)",
+    "st.copied": "'{0}' dupliqué → {1} (pensez à enregistrer)",
+    "st.deleted": "'{0}' supprimé (pensez à enregistrer)",
+    "st.created": "Nouveau fichier créé : {0}",
+    "st.renamed": "« {0} » renommé en « {1} » (pensez à enregistrer)",
+    "st.reloaded": "Rechargé depuis le disque.",
+    "st.shortcut": "Raccourci créé : {0}",
+    "msg.name.empty": "Le nom de la connexion ne peut pas être vide.",
+    "msg.name.exists": "Une connexion nommée '{0}' existe déjà.",
+    "msg.read.fail": "Impossible de lire le fichier :\n{0}",
+    "msg.legacy.save": "Ces connexions contiennent des paramètres qu'ARC-1 n'accepte plus :\n\n{0}\n\nARC-1 ne démarrera pas pour elles en l'état. Enregistrer quand même ?",
+    "msg.save.fail": "Échec de l'enregistrement :\n{0}",
+    "msg.unsaved": "Des modifications ne sont pas enregistrées. Les enregistrer ?",
+    "msg.delete": "Supprimer la connexion '{0}' ?",
+    "msg.url.first": "Saisissez d'abord l'adresse du serveur.",
+    "msg.conflict": "Le fichier a été modifié en dehors de cette application après son ouverture. Écraser ces modifications, ou recharger le fichier et perdre les vôtres ?",
+    "msg.exists": "{0} existe déjà. L'ouvrir, ou le remplacer par un nouveau fichier d'exemple ? (L'ancien fichier est conservé en .bak.)",
+    "msg.store.fail": "Impossible d'accéder au magasin d'identifiants du système :\n{0}",
+    "msg.store.need": "« {0} » : saisissez d'abord l'adresse du serveur et l'utilisateur. Le mot de passe enregistré y est lié.",
+    "msg.pwd.missing": "« {0} » : aucun mot de passe n'est encore enregistré dans le magasin d'identifiants. Saisissez d'abord le mot de passe.",
+    "msg.pwd.confirm": "Aucun mot de passe n'est encore enregistré pour : {0}. ARC-1 ne pourra pas se connecter à SAP tant que vous n'en aurez pas saisi un. Enregistrer quand même ?",
+    "msg.jsonc": "Ce fichier contient des commentaires. L'enregistrement le réécrit en JSON pur et les commentaires sont perdus. Continuer ?",
+    "msg.notjson": "Seuls les fichiers .json peuvent être ouverts.",
+    "msg.unexpected": "Une erreur s'est produite :\n{0}",
+    "msg.lost": "La connexion à l'application a été perdue. Si vous avez fermé son terminal, relancez-la avec : npx arc1-connection-manager",
+    "msg.bye": "L'application s'est arrêtée. Vous pouvez fermer cette fenêtre.",
+    "msg.shortcut.fail": "Impossible de créer le raccourci :\n{0}",
+    "ban.changed": "Ce fichier a été modifié en dehors de l'application.",
+    "ban.missing": "Ce fichier n'existe plus sur le disque. L'enregistrement le recréera.",
+    "ban.reload": "Recharger",
+    "ban.keep": "Garder ma version",
+    "test.title": "Test de connexion",
+    "test.running": "Test de la connexion…",
+    "test.ok": "Connexion réussie (HTTP {0}). Le service ADT est accessible.",
+    "test.401": "Nom d'utilisateur ou mot de passe incorrect (HTTP 401).",
+    "test.403": "Connecté, mais sans autorisation pour ADT (HTTP 403).",
+    "test.404": "Service ADT introuvable (HTTP 404). /sap/bc/adt est-il actif dans SICF ?",
+    "test.redirect": "Le serveur a redirigé vers une page de connexion (HTTP {0}). SAML / SSO est peut-être actif ; essayez 'Désactiver la redirection SAML'.",
+    "test.other": "Le serveur a renvoyé HTTP {0}.",
+    "test.fail": "Connexion impossible :\n{0}",
+    "test.ssl": "Le certificat du serveur n'est pas approuvé :\n{0}\n\nPour un certificat auto-signé, ajoutez 'Ignorer la vérification SSL' via Ajouter un paramètre.",
+    "test.notfound": "Serveur introuvable : {0}. Vérifiez l'adresse et votre réseau / VPN.",
+    "test.refused": "{0} a refusé la connexion. Vérifiez le port.",
+    "test.timeout": "Aucune réponse en 15 secondes. Vérifiez l'adresse et votre réseau / VPN.",
+    "test.badurl": "L'adresse du serveur doit commencer par http:// ou https://.",
+    "val.title": "Vérification ARC-1",
+    "val.running": "ARC-1 vérifie les paramètres… La première vérification peut prendre une minute, le temps que npx télécharge ARC-1.",
+    "val.ok": "ARC-1 {0} accepte ces paramètres.",
+    "val.fail": "ARC-1 {0} ne démarrera pas avec ces paramètres :",
+    "val.error": "Impossible d'exécuter ARC-1 :",
+    "val.timeout": "ARC-1 n'a pas répondu à temps. Vérifiez votre connexion réseau au registre npm.",
+    "val.nonpx": "npx est introuvable. ARC-1 nécessite Node.js ; installez-le depuis nodejs.org.",
+    "val.policy": "Autorisations effectives",
+    "val.writes": "Écritures",
+    "val.packages": "Packages modifiables",
+    "val.transports": "Écritures de transport",
+    "val.git": "Écritures Git",
+    "val.data": "Aperçu des données de table",
+    "val.sql": "SQL libre",
+    "val.deny": "Actions interdites",
+    "val.sources": "Sources de données bloquées",
+    "val.allowed": "Autorisé",
+    "val.blocked": "Bloqué",
+    "val.none": "aucune",
+    "val.warnings": "Avertissements d'ARC-1",
+    "fb.open.title": "Ouvrir une configuration MCP",
+    "fb.new.title": "Créer un fichier",
+    "fb.pick.title": "Choisir un fichier",
+    "fb.places": "Emplacements",
+    "fb.cwd": "Dossier actuel",
+    "fb.home": "Dossier personnel",
+    "fb.desktop": "Bureau",
+    "fb.documents": "Documents",
+    "fb.workspace": "Espace de travail Eclipse",
+    "fb.claude": "Configuration Claude Desktop",
+    "fb.recent": "Récents",
+    "fb.drives": "Ce PC",
+    "fb.up": "Dossier parent",
+    "fb.go": "Aller",
+    "fb.path": "Chemin",
+    "fb.empty": "Aucun dossier ni fichier .json ici.",
+    "fb.open": "Ouvrir",
+    "fb.create": "Créer ici",
+    "fb.select": "Sélectionner",
+    "fb.filename": "Nom du fichier",
+    "fb.err": "Impossible d'ouvrir ce dossier :\n{0}",
+    "fb.hint.open": "Choisissez .mcp.json ou une autre configuration MCP comme claude_desktop_config.json.",
+    "fb.hint.new": "Choisissez le dossier de projet dans lequel Claude Code est lancé. Le fichier y sera créé."
+  },
+  "groups": {
+    "perm": "Autorisations",
+    "quality": "Qualité du code",
+    "conn": "Connexion (avancé)",
+    "btp": "BTP",
+    "feat": "Détection des fonctionnalités",
+    "tools": "Outils",
+    "perf": "Performances",
+    "log": "Journalisation",
+    "plugins": "Extensions"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "Autoriser l'écriture",
+      "Créer, modifier, supprimer et activer des objets. Désactivé, ARC-1 lit uniquement."
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "Paquets modifiables",
+      "Séparés par des virgules : ZFOO (exact), Z* (préfixe), ZFOO/** (avec sous-paquets), * (tous)."
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "Écriture des transports",
+      "Créer / libérer des ordres de transport. « Autoriser l'écriture » doit aussi être activé."
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "Ordres de transport autorisés",
+      "Écrit uniquement dans ces ordres, séparés par des virgules (ex. DEVK900123). Aucune limite si vide."
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Écriture Git (abapGit / gCTS)",
+      "Push, pull, etc. « Autoriser l'écriture » doit aussi être activé."
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "Aperçu des données de table",
+      "Lire les données de tables / CDS, comme SE16."
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "SQL libre",
+      "Exécuter des requêtes SELECT écrites à la main."
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "Sources de données bloquées",
+      "Noms de tables / CDS dont les données ne doivent pas être lues, séparés par des virgules (expérimental)."
+    ],
+    "SAP_DENY_ACTIONS": [
+      "Actions interdites",
+      "Actions à désactiver individuellement, séparées par des virgules. Ex. SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "abaplint avant l'écriture",
+      "Exécuter abaplint avant d'écrire le code source dans SAP."
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "Contrôle syntaxique SAP avant l'écriture",
+      "Contrôle syntaxique côté SAP (avertit, ne bloque pas)."
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "Fichier de configuration abaplint",
+      "Chemin complet d'un abaplint.json personnalisé."
+    ],
+    "SAP_INSECURE": [
+      "Ignorer la vérification SSL",
+      "Pour les systèmes avec certificats auto-signés."
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "Type de système",
+      "auto : détecter · onprem : sur site · btp : BTP ABAP Environment."
+    ],
+    "SAP_ABAP_RELEASE": [
+      "Version ABAP",
+      "Version SAP_BASIS pour abaplint (ex. 758). Normalement détectée automatiquement."
+    ],
+    "SAP_DISABLE_SAML": [
+      "Désactiver la redirection SAML",
+      "Si la connexion Basic bloque sur une redirection SAML. Ne pas utiliser sur BTP / S/4 Cloud."
+    ],
+    "SAP_COOKIE_FILE": [
+      "Fichier de cookies",
+      "Chemin d'un fichier de cookies au format Netscape (scénarios SSO)."
+    ],
+    "SAP_COOKIE_STRING": [
+      "Chaîne de cookies",
+      "Cookies au format k=v; k2=v2 (lus uniquement au démarrage)."
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "Nom du client envoyé à SAP. N'y mettez pas de secrets."
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "Compresser les requêtes d'aperçu",
+      "Uniquement si un pare-feu applicatif (WAF) pose problème."
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "Fichier de clé de service",
+      "Chemin de la clé de service BTP ABAP (JSON). Une connexion via navigateur s'ouvre au premier usage."
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "Clé de service (texte JSON)",
+      "Le contenu JSON lui-même au lieu d'un fichier."
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "Port de rappel OAuth",
+      "0 = automatique."
+    ],
+    "ARC1_TOOL_MODE": [
+      "Mode des outils",
+      "standard : 12 outils · hyperfocused : un seul outil (très peu de jetons)."
+    ],
+    "ARC1_SERVER_NAME": [
+      "Nom du serveur",
+      "Nom affiché dans le client MCP. Donnez un nom différent à chaque système."
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "Libellé du système",
+      "Description d'une ligne montrée au modèle (ex. DEV 100). 160 caractères max."
+    ],
+    "ARC1_IDE_LINKS": [
+      "Liens Eclipse",
+      "eclipse : ajoute des liens Eclipse ADT aux réponses (ID système requis)."
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "ID système (SID)",
+      "Le vrai SID SAP de 3 caractères, en majuscules (ex. DEV)."
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "Compatibilité du schéma",
+      "auto suffit pour Claude. on : mode strict OpenAI / Azure."
+    ],
+    "ARC1_UI": [
+      "Console navigateur",
+      "Vue expérimentale, en lecture seule, de l'état d'ARC-1 dans le navigateur. local : la lancer sur cet ordinateur."
+    ],
+    "ARC1_UI_OPEN": [
+      "Ouvrir la console au démarrage",
+      "Ouvre automatiquement la console navigateur au démarrage d'ARC-1."
+    ],
+    "ARC1_UI_ADDR": [
+      "Adresse de la console navigateur",
+      "Adresse et port de la console navigateur. Doit rester sur 127.0.0.1."
+    ],
+    "ARC1_UI_PORT": [
+      "Port de la console navigateur",
+      "Modifie uniquement le port de l'adresse de la console navigateur."
+    ],
+    "ARC1_CACHE": [
+      "Cache",
+      "auto · memory : en mémoire · sqlite : fichier · none : désactivé."
+    ],
+    "ARC1_CACHE_FILE": [
+      "Fichier de cache",
+      "Chemin du fichier en mode sqlite."
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "Requêtes SAP simultanées",
+      "Nombre maximal de requêtes SAP envoyées en même temps."
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "Limite de réponse de données (octets)",
+      "Octets maximum par lecture de données (2 Mo par défaut)."
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "Résultats de données simultanés",
+      "Nombre maximal de résultats de données traités en même temps."
+    ],
+    "ARC1_LOG_LEVEL": [
+      "Niveau de journalisation",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "Format du journal",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "Fichier journal",
+      "Chemin complet du fichier où écrire les journaux."
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "Journalisation de débogage HTTP",
+      "Ajoute aux journaux les détails des requêtes et réponses. Les en-têtes sensibles sont masqués. Pour le dépannage uniquement."
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "Messages d'erreur courts",
+      "Masque au modèle les détails des erreurs SAP."
+    ],
+    "SAP_VERBOSE": [
+      "Journalisation détaillée",
+      "Journalise toutes les requêtes HTTP (le niveau passe à debug)."
+    ],
+    "ARC1_PLUGINS": [
+      "Fichiers d'extension",
+      "Chemins complets des extensions, séparés par des virgules (.js / .json)."
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "Les extensions peuvent exécuter de l'ABAP",
+      "« Autoriser l'écriture » doit aussi être activé."
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "Les extensions peuvent écrire en OData / ICF",
+      "« Autoriser l'écriture » doit aussi être activé."
+    ]
+  }
+}

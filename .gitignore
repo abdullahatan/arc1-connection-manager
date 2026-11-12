@@ -1,0 +1,14 @@
+node_modules/
+*.tgz
+
+# Never commit real MCP configs: they may contain SAP passwords in plain text
+.mcp.json
+*.mcp.json
+*.bak
+
+# OS / editor files
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

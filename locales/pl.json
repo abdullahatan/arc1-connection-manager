@@ -1,0 +1,437 @@
+{
+  "name": "Polski",
+  "ui": {
+    "app.title": "Menedżer połączeń ARC-1 MCP",
+    "app.subtitle": "SAP ADT · ustawienia MCP",
+    "top.open": "Otwórz plik",
+    "top.open.tt": "Otwórz istniejący plik .mcp.json",
+    "top.new": "Nowy plik",
+    "top.new.tt": "Utwórz nowy plik .mcp.json z przykładowym połączeniem",
+    "top.reload": "Wczytaj ponownie",
+    "top.reload.tt": "Ponownie odczytaj plik z dysku",
+    "top.lang.tt": "Język aplikacji",
+    "top.light.tt": "Motyw jasny",
+    "top.dark.tt": "Motyw ciemny",
+    "top.nofile": "Nie wybrano pliku",
+    "top.file.tt": "Kliknij, aby otworzyć inny plik",
+    "side.title": "Połączenia",
+    "side.new": "Nowe połączenie",
+    "side.copy": "Duplikuj",
+    "side.copy.tt": "Duplikuj wybrane połączenie",
+    "side.delete": "Usuń",
+    "side.delete.tt": "Usuń wybrane połączenie",
+    "side.noaddr": "Brak adresu",
+    "side.legacy.tt": "Zawiera ustawienie, którego ARC-1 już nie akceptuje; wymaga poprawy.",
+    "side.other": "Inne serwery MCP",
+    "side.other.tt": "To nie jest serwer ARC-1; pozostaje bez zmian",
+    "side.stored.tt": "Hasło jest w magazynie poświadczeń systemu operacyjnego",
+    "welcome.title": "Witamy",
+    "welcome.text": "Aby rozpocząć, otwórz plik .mcp.json używany przez Claude Code lub utwórz nowy z przykładowym połączeniem.",
+    "welcome.hint": "Claude Code szuka pliku .mcp.json w folderze projektu, w którym jest uruchamiany (np. w workspace Eclipse).",
+    "welcome.open": "Otwórz istniejący plik",
+    "welcome.open.desc": "Wybierz plik .mcp.json na komputerze.",
+    "welcome.new": "Utwórz nowy plik",
+    "welcome.new.desc": "Utwórz plik .mcp.json z przykładowym połączeniem ARC-1.",
+    "welcome.missing": "Nie znaleziono ostatnio używanego pliku: {0}",
+    "welcome.recent": "Ostatnie pliki",
+    "welcome.shortcut": "Utwórz skrót na pulpicie",
+    "welcome.shortcut.tt": "Dodaje skrót, który uruchamia tę aplikację przez npx (pulpit i menu Start)",
+    "empty.title": "Brak połączeń",
+    "empty.text": "Dodaj pierwszy system SAP przyciskiem Nowe połączenie w lewym dolnym rogu.",
+    "ed.name.tt": "Kliknij, aby zmienić nazwę połączenia",
+    "ed.system": "System: {0}",
+    "ed.noaddr": "Nie podano jeszcze adresu serwera",
+    "ed.test": "Testuj połączenie",
+    "ed.test.tt": "Spróbuj zalogować się do usługi SAP ADT",
+    "ed.validate": "Sprawdź w ARC-1",
+    "ed.validate.tt": "Niech ARC-1 sam sprawdzi te ustawienia, w wersji ARC-1 używanej przez to połączenie",
+    "ed.conn": "Połączenie SAP",
+    "ed.settings": "Ustawienia",
+    "ed.settings.desc": "Do pliku zapisywane są tylko dodane ustawienia. Dla pozostałych obowiązują wartości domyślne ARC-1.",
+    "ed.add": "Dodaj ustawienie",
+    "ed.advanced": "Zaawansowane",
+    "ed.cmd": "Polecenie uruchomienia",
+    "ed.cmd.help": "Jak klient MCP uruchamia ARC-1. Aby przypiąć wersję, wpisz arc-1@1.10.1 zamiast arc-1.",
+    "ed.cmd.written": "Zapisywane w pliku jako:",
+    "other.title": "To nie jest serwer ARC-1",
+    "other.text": "Ten wpis należy do innego serwera MCP. Przy zapisie pozostaje dokładnie taki, jaki jest.",
+    "other.cmd": "Polecenie",
+    "f.url": "Adres serwera",
+    "f.url.help": "Z protokołem i portem, np. https://sap-host:44300",
+    "f.user": "Użytkownik",
+    "f.user.help": "Twoja nazwa użytkownika SAP.",
+    "f.pwd": "Hasło",
+    "f.pwd.help": "Zapisywane w pliku jako zwykły tekst.",
+    "f.pwd.help.store": "Zaszyfrowane w: {0}. Plik nie zawiera hasła.",
+    "f.client": "Mandant",
+    "f.client.help": "3 cyfry. Puste oznacza 100.",
+    "f.lang": "Język",
+    "f.lang.help": "Puste oznacza EN. To także język oryginalny nowo tworzonych obiektów.",
+    "pwd.show": "Pokaż hasło",
+    "pwd.hide": "Ukryj hasło",
+    "pwd.mode.store": "Magazyn poświadczeń",
+    "pwd.mode.file": "W pliku",
+    "pwd.mode.store.tt": "Zalecane: system operacyjny przechowuje hasło zaszyfrowane; .mcp.json uruchamia ARC-1 tylko przez tę aplikację.",
+    "pwd.mode.file.tt": "Zwykły tekst w .mcp.json. Działa wszędzie, ale każdy, kto może odczytać plik, odczyta też hasło.",
+    "pwd.na": "Magazyn poświadczeń nie jest dostępny na tym komputerze: {0}",
+    "pwd.ph.stored": "Zapisane w magazynie poświadczeń",
+    "pwd.ph.none": "Jeszcze nie zapisane – wpisz hasło",
+    "store.windows": "Menedżer poświadczeń systemu Windows",
+    "store.macos": "Pęk kluczy macOS",
+    "store.linux": "Secret Service (GNOME Keyring / KWallet)",
+    "set.on": "Wł.",
+    "set.off": "Wył.",
+    "set.default": "Domyślnie: {0}",
+    "set.empty": "puste",
+    "set.default.tt": "Domyślne",
+    "set.invalid.bool": "Nieprawidłowa wartość '{0}'; ARC-1 traktuje ją jako wyłączoną.",
+    "set.invalid.enum": "Nieprawidłowa wartość '{0}'; ARC-1 używa wartości domyślnej.",
+    "set.invalid.int": "'{0}' nie jest liczbą całkowitą.",
+    "set.invalid.range": "Dozwolony zakres: {0}–{1}.",
+    "set.invalid.pattern": "'{0}' nie ma oczekiwanego formatu.",
+    "set.invalid.length": "Maksymalnie {0} znaków.",
+    "set.invalid.list": "Zawiera pusty wpis (dwa przecinki z rzędu).",
+    "set.fatal": "Z tą wartością ARC-1 się nie uruchomi.",
+    "set.remove.tt": "Usuń to ustawienie (obowiązuje wartość domyślna ARC-1)",
+    "set.browse.tt": "Wybierz plik",
+    "set.none": "Brak dodatkowych ustawień. ARC-1 działa z wartościami domyślnymi: tylko odczyt, tylko pakiet $TMP.",
+    "set.legacy.title": "Usunięte ustawienie",
+    "set.legacy.help": "ARC-1 nie uruchomi się, dopóki to ustawienie istnieje.",
+    "set.legacy.use": "Zamiast tego użyj '{0}' ({1}).",
+    "set.legacy.inverted": "Znaczenie jest odwrócone.",
+    "set.legacy.current": "Bieżąca wartość: {0}",
+    "set.legacy.convert": "Przekształć: {0}",
+    "set.arc1says": "Komunikat ARC-1: {0}",
+    "legacy.denyactions": "Zamiast tego użyj 'Zabronione akcje' (SAP_DENY_ACTIONS).",
+    "legacy.profile": "Profile zostały usunięte; dodawaj uprawnienia pojedynczo.",
+    "legacy.apikey": "Usunięte (ARC1_API_KEYS jest używane tylko w trybie HTTP).",
+    "legacy.removed": "Usunięte.",
+    "set.unknown.title": "Nierozpoznane ustawienie",
+    "set.unknown.help": "ARC-1 nie zna tego ustawienia, więc je pomija.",
+    "set.unknown.typo": "Czy chodziło o {0}?",
+    "set.unknown.rename": "Zmień nazwę na {0}",
+    "set.ignored.title": "Pomijane ustawienie",
+    "set.ignored.help": "ARC-1 pomija to ustawienie. Możesz je usunąć.",
+    "set.server.title": "Ustawienie serwera",
+    "set.server.help": "Używane głównie, gdy ARC-1 działa jako współdzielony serwer HTTP / BTP.",
+    "grp.legacy": "Ustawienia do poprawienia",
+    "grp.other": "Inne",
+    "feat.help": "auto: włączone, jeśli system obsługuje · on: wymuś · off: wyłącz.",
+    "issue.cmdwin": "W systemie Windows Claude Code może uruchomić npx tylko przez cmd /c.",
+    "issue.fix": "Napraw",
+    "add.title": "Dodaj ustawienie",
+    "add.hint": "Szukaj po nazwie, kluczu lub opisie. ↑ ↓ – nawigacja, Enter lub dwukrotne kliknięcie – dodanie.",
+    "add.nomatch": "Brak pasujących ustawień, które nie zostały jeszcze dodane.",
+    "dlg.close.tt": "Zamknij (Esc)",
+    "dlg.ok": "OK",
+    "dlg.cancel": "Anuluj",
+    "dlg.yes": "Tak",
+    "dlg.no": "Nie",
+    "dlg.save": "Zapisz",
+    "dlg.dontsave": "Nie zapisuj",
+    "dlg.overwrite": "Zastąp",
+    "dlg.reload": "Wczytaj ponownie",
+    "dlg.saveanyway": "Zapisz mimo to",
+    "dlg.replace": "Zamień",
+    "dlg.openit": "Otwórz go",
+    "lang.title": "Język",
+    "foot.save": "Zapisz",
+    "foot.save.tt": "Zapisz (Ctrl+S)",
+    "foot.dirty": "Niezapisane zmiany",
+    "st.loaded": "Wczytano połączenia: {0}.",
+    "st.legacy": "{0}: zawiera stare ustawienia, których ARC-1 już nie akceptuje. Otwórz połączenie i kliknij 'Przekształć'.",
+    "st.saved": "Zapisano o {0}. Kopia zapasowa: {1}. Uruchom ponownie Claude Code, aby zastosować zmiany.",
+    "st.removed": "Usunięto {0} (pamiętaj o zapisaniu)",
+    "st.converted": "{0} → {1} = {2} przekształcono (pamiętaj o zapisaniu)",
+    "st.added": "Dodano '{0}' (pamiętaj o zapisaniu)",
+    "st.newconn": "Dodano nowe połączenie: {0} (pamiętaj o zapisaniu)",
+    "st.copied": "Zduplikowano '{0}' → {1} (pamiętaj o zapisaniu)",
+    "st.deleted": "Usunięto '{0}' (pamiętaj o zapisaniu)",
+    "st.created": "Utworzono nowy plik: {0}",
+    "st.renamed": "Zmieniono nazwę '{0}' na '{1}' (pamiętaj o zapisaniu)",
+    "st.reloaded": "Wczytano ponownie z dysku.",
+    "st.shortcut": "Utworzono skrót: {0}",
+    "msg.name.empty": "Nazwa połączenia nie może być pusta.",
+    "msg.name.exists": "Połączenie o nazwie '{0}' już istnieje.",
+    "msg.read.fail": "Nie można odczytać pliku:\n{0}",
+    "msg.legacy.save": "Te połączenia zawierają ustawienia, których ARC-1 już nie akceptuje:\n\n{0}\n\nW tej postaci ARC-1 się dla nich nie uruchomi. Zapisać mimo to?",
+    "msg.save.fail": "Nie można zapisać:\n{0}",
+    "msg.unsaved": "Są niezapisane zmiany. Zapisać je?",
+    "msg.delete": "Usunąć połączenie '{0}'?",
+    "msg.url.first": "Najpierw podaj adres serwera.",
+    "msg.conflict": "Plik został zmieniony poza tą aplikacją po jego otwarciu. Zastąpić te zmiany czy wczytać plik ponownie i utracić swoje?",
+    "msg.exists": "{0} już istnieje. Otworzyć go czy zastąpić nowym plikiem przykładowym? (Stary plik zostanie zachowany jako .bak.)",
+    "msg.store.fail": "Brak dostępu do magazynu poświadczeń systemu operacyjnego:\n{0}",
+    "msg.store.need": "'{0}': najpierw wpisz adres serwera i użytkownika. Zapisane hasło jest z nimi powiązane.",
+    "msg.pwd.missing": "'{0}': w magazynie poświadczeń nie ma jeszcze hasła. Najpierw wpisz hasło.",
+    "msg.pwd.confirm": "Dla tych połączeń nie zapisano jeszcze hasła: {0}. ARC-1 nie zaloguje się do SAP, dopóki go nie wpiszesz. Zapisać mimo to?",
+    "msg.jsonc": "Ten plik zawiera komentarze. Zapis przepisze go jako zwykły JSON, a komentarze zostaną utracone. Kontynuować?",
+    "msg.notjson": "Można otwierać tylko pliki .json.",
+    "msg.unexpected": "Coś poszło nie tak:\n{0}",
+    "msg.lost": "Utracono połączenie z aplikacją. Jeśli zamknięto jej terminal, uruchom ją ponownie poleceniem: npx arc1-connection-manager",
+    "msg.bye": "Aplikacja została zatrzymana. Możesz zamknąć to okno.",
+    "msg.shortcut.fail": "Nie udało się utworzyć skrótu:\n{0}",
+    "ban.changed": "Ten plik został zmieniony poza aplikacją.",
+    "ban.missing": "Tego pliku nie ma już na dysku. Zapis utworzy go ponownie.",
+    "ban.reload": "Wczytaj ponownie",
+    "ban.keep": "Zachowaj moją wersję",
+    "test.title": "Test połączenia",
+    "test.running": "Testowanie połączenia…",
+    "test.ok": "Połączenie udane (HTTP {0}). Usługa ADT jest dostępna.",
+    "test.401": "Nieprawidłowa nazwa użytkownika lub hasło (HTTP 401).",
+    "test.403": "Zalogowano, ale brak uprawnień do ADT (HTTP 403).",
+    "test.404": "Nie znaleziono usługi ADT (HTTP 404). Czy /sap/bc/adt jest aktywne w SICF?",
+    "test.redirect": "Serwer przekierował do strony logowania (HTTP {0}). Może być aktywne SAML / SSO; spróbuj 'Wyłącz przekierowanie SAML'.",
+    "test.other": "Serwer zwrócił HTTP {0}.",
+    "test.fail": "Nie można się połączyć:\n{0}",
+    "test.ssl": "Certyfikat serwera nie jest zaufany:\n{0}\n\nPrzy certyfikacie z podpisem własnym dodaj 'Pomiń weryfikację SSL' przez Dodaj ustawienie.",
+    "test.notfound": "Nie znaleziono serwera: {0}. Sprawdź adres oraz sieć / VPN.",
+    "test.refused": "{0} odrzucił połączenie. Sprawdź port.",
+    "test.timeout": "Brak odpowiedzi w ciągu 15 sekund. Sprawdź adres oraz sieć / VPN.",
+    "test.badurl": "Adres serwera musi zaczynać się od http:// lub https://.",
+    "val.title": "Sprawdzenie ARC-1",
+    "val.running": "ARC-1 sprawdza ustawienia… Za pierwszym razem może to potrwać minutę, gdy npx pobiera ARC-1.",
+    "val.ok": "ARC-1 {0} akceptuje te ustawienia.",
+    "val.fail": "Z tymi ustawieniami ARC-1 {0} się nie uruchomi:",
+    "val.error": "Nie udało się uruchomić ARC-1:",
+    "val.timeout": "ARC-1 nie odpowiedział na czas. Sprawdź połączenie sieciowe z rejestrem npm.",
+    "val.nonpx": "Nie znaleziono npx. ARC-1 wymaga Node.js; zainstaluj go ze strony nodejs.org.",
+    "val.policy": "Efektywne uprawnienia",
+    "val.writes": "Zapis",
+    "val.packages": "Pakiety do zapisu",
+    "val.transports": "Zapis transportów",
+    "val.git": "Zapis w Git",
+    "val.data": "Podgląd danych tabel",
+    "val.sql": "Dowolny SQL",
+    "val.deny": "Zablokowane akcje",
+    "val.sources": "Zablokowane źródła danych",
+    "val.allowed": "Dozwolone",
+    "val.blocked": "Zablokowane",
+    "val.none": "brak",
+    "val.warnings": "Ostrzeżenia ARC-1",
+    "fb.open.title": "Otwórz konfigurację MCP",
+    "fb.new.title": "Utwórz nowy plik",
+    "fb.pick.title": "Wybierz plik",
+    "fb.places": "Miejsca",
+    "fb.cwd": "Bieżący folder",
+    "fb.home": "Folder domowy",
+    "fb.desktop": "Pulpit",
+    "fb.documents": "Dokumenty",
+    "fb.workspace": "Obszar roboczy Eclipse",
+    "fb.claude": "Konfiguracja Claude Desktop",
+    "fb.recent": "Ostatnie",
+    "fb.drives": "Ten komputer",
+    "fb.up": "Poziom wyżej",
+    "fb.go": "Przejdź",
+    "fb.path": "Ścieżka",
+    "fb.empty": "Brak folderów i plików .json.",
+    "fb.open": "Otwórz",
+    "fb.create": "Utwórz tutaj",
+    "fb.select": "Wybierz",
+    "fb.filename": "Nazwa pliku",
+    "fb.err": "Nie można otworzyć tego folderu:\n{0}",
+    "fb.hint.open": "Wybierz .mcp.json lub inną konfigurację MCP, np. claude_desktop_config.json.",
+    "fb.hint.new": "Wybierz folder projektu, w którym uruchamiany jest Claude Code. Plik zostanie tam utworzony."
+  },
+  "groups": {
+    "perm": "Uprawnienia",
+    "quality": "Jakość kodu",
+    "conn": "Połączenie (zaawansowane)",
+    "btp": "BTP",
+    "feat": "Wykrywanie funkcji",
+    "tools": "Narzędzia",
+    "perf": "Wydajność",
+    "log": "Dziennik",
+    "plugins": "Rozszerzenia"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "Zezwól na zapis",
+      "Tworzenie, zmiana, usuwanie i aktywacja obiektów. Wyłączone: ARC-1 tylko odczytuje."
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "Pakiety do zapisu",
+      "Oddzielone przecinkami: ZFOO (dokładnie), Z* (prefiks), ZFOO/** (z podpakietami), * (wszystkie)."
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "Zapis transportów",
+      "Tworzenie / zwalnianie zleceń transportowych. „Zezwól na zapis” też musi być włączone."
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "Dozwolone zlecenia transportowe",
+      "Zapis tylko do tych zleceń, oddzielonych przecinkami (np. DEVK900123). Puste = bez ograniczeń."
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Zapis Git (abapGit / gCTS)",
+      "Push, pull itp. „Zezwól na zapis” też musi być włączone."
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "Podgląd danych tabel",
+      "Odczyt danych tabel / CDS, podobnie jak SE16."
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "Dowolny SQL",
+      "Uruchamianie ręcznie napisanych zapytań SELECT."
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "Zablokowane źródła danych",
+      "Nazwy tabel / CDS, których danych nie wolno odczytywać, oddzielone przecinkami (eksperymentalne)."
+    ],
+    "SAP_DENY_ACTIONS": [
+      "Zabronione akcje",
+      "Akcje wyłączane pojedynczo, oddzielone przecinkami. Np. SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "abaplint przed zapisem",
+      "Uruchom abaplint przed zapisaniem kodu źródłowego w SAP."
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "Kontrola składni SAP przed zapisem",
+      "Kontrola składni po stronie SAP (ostrzega, nie blokuje)."
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "Plik konfiguracji abaplint",
+      "Pełna ścieżka do własnego pliku abaplint.json."
+    ],
+    "SAP_INSECURE": [
+      "Pomiń weryfikację SSL",
+      "Dla systemów z certyfikatami z podpisem własnym."
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "Typ systemu",
+      "auto: wykryj · onprem: lokalny · btp: BTP ABAP Environment."
+    ],
+    "SAP_ABAP_RELEASE": [
+      "Wersja ABAP",
+      "Wersja SAP_BASIS dla abaplint (np. 758). Zwykle wykrywana automatycznie."
+    ],
+    "SAP_DISABLE_SAML": [
+      "Wyłącz przekierowanie SAML",
+      "Gdy logowanie Basic zatrzymuje się na przekierowaniu SAML. Nie używać w BTP / S/4 Cloud."
+    ],
+    "SAP_COOKIE_FILE": [
+      "Plik cookie",
+      "Ścieżka do pliku cookie w formacie Netscape (scenariusze SSO)."
+    ],
+    "SAP_COOKIE_STRING": [
+      "Ciąg cookie",
+      "Cookie w postaci k=v; k2=v2 (odczytywane tylko przy starcie)."
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "Nazwa klienta wysyłana do SAP. Nie wpisuj tajnych danych."
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "Kompresuj żądania podglądu danych",
+      "Tylko jeśli zapora aplikacji WWW (WAF) sprawia problemy."
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "Plik klucza usługi",
+      "Ścieżka do klucza usługi BTP ABAP (JSON). Przy pierwszym użyciu otworzy się logowanie w przeglądarce."
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "Klucz usługi (tekst JSON)",
+      "Sama zawartość JSON zamiast pliku."
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "Port zwrotny OAuth",
+      "0 = automatycznie."
+    ],
+    "ARC1_TOOL_MODE": [
+      "Tryb narzędzi",
+      "standard: 12 narzędzi · hyperfocused: jedno narzędzie (bardzo mało tokenów)."
+    ],
+    "ARC1_SERVER_NAME": [
+      "Nazwa serwera",
+      "Nazwa widoczna w kliencie MCP. Każdemu systemowi nadaj inną nazwę."
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "Etykieta systemu",
+      "Jednowierszowy opis dla modelu (np. DEV 100). Maks. 160 znaków."
+    ],
+    "ARC1_IDE_LINKS": [
+      "Łącza Eclipse",
+      "eclipse: dodaje do odpowiedzi łącza Eclipse ADT (wymaga ID systemu)."
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "ID systemu (SID)",
+      "Prawdziwy 3-znakowy SID SAP, wielkimi literami (np. DEV)."
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "Zgodność schematu",
+      "Dla Claude wystarczy auto. on: tryb ścisły OpenAI / Azure."
+    ],
+    "ARC1_UI": [
+      "Konsola w przeglądarce",
+      "Eksperymentalny podgląd stanu ARC-1 w przeglądarce, tylko do odczytu. local: uruchom na tym komputerze."
+    ],
+    "ARC1_UI_OPEN": [
+      "Otwórz konsolę przy starcie",
+      "Automatycznie otwiera konsolę w przeglądarce przy starcie ARC-1."
+    ],
+    "ARC1_UI_ADDR": [
+      "Adres konsoli",
+      "Adres i port konsoli w przeglądarce. Musi pozostać na 127.0.0.1."
+    ],
+    "ARC1_UI_PORT": [
+      "Port konsoli",
+      "Zmienia tylko port w adresie konsoli w przeglądarce."
+    ],
+    "ARC1_CACHE": [
+      "Pamięć podręczna",
+      "auto · memory: w pamięci · sqlite: plik · none: wyłączona."
+    ],
+    "ARC1_CACHE_FILE": [
+      "Plik pamięci podręcznej",
+      "Ścieżka pliku w trybie sqlite."
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "Równoczesne żądania SAP",
+      "Maksymalna liczba żądań SAP wysyłanych jednocześnie."
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "Limit odpowiedzi danych (bajty)",
+      "Maksymalna liczba bajtów na odczyt danych (domyślnie 2 MB)."
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "Równoczesne wyniki danych",
+      "Maksymalna liczba wyników danych przetwarzanych jednocześnie."
+    ],
+    "ARC1_LOG_LEVEL": [
+      "Poziom dziennika",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "Format dziennika",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "Plik dziennika",
+      "Pełna ścieżka pliku, do którego zapisywane są dzienniki."
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "Dziennik debugowania HTTP",
+      "Dodaje do dzienników szczegóły żądań i odpowiedzi. Wrażliwe nagłówki są ukrywane. Tylko do diagnozowania problemów."
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "Krótkie komunikaty o błędach",
+      "Ukrywa przed modelem szczegóły błędów SAP."
+    ],
+    "SAP_VERBOSE": [
+      "Szczegółowy dziennik",
+      "Rejestruje wszystkie żądania HTTP (poziom zmienia się na debug)."
+    ],
+    "ARC1_PLUGINS": [
+      "Pliki rozszerzeń",
+      "Pełne ścieżki rozszerzeń, oddzielone przecinkami (.js / .json)."
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "Rozszerzenia mogą uruchamiać ABAP",
+      "„Zezwól na zapis” też musi być włączone."
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "Rozszerzenia mogą zapisywać do OData / ICF",
+      "„Zezwól na zapis” też musi być włączone."
+    ]
+  }
+}

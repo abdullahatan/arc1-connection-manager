@@ -1,0 +1,437 @@
+{
+  "name": "Nederlands",
+  "ui": {
+    "app.title": "ARC-1 MCP-verbindingsbeheer",
+    "app.subtitle": "SAP ADT · MCP-instellingen",
+    "top.open": "Bestand openen",
+    "top.open.tt": "Een bestaand .mcp.json-bestand openen",
+    "top.new": "Nieuw bestand",
+    "top.new.tt": "Een nieuw .mcp.json maken met een voorbeeldverbinding",
+    "top.reload": "Opnieuw laden",
+    "top.reload.tt": "Het bestand opnieuw van schijf lezen",
+    "top.lang.tt": "Taal van de toepassing",
+    "top.light.tt": "Licht thema",
+    "top.dark.tt": "Donker thema",
+    "top.nofile": "Geen bestand geselecteerd",
+    "top.file.tt": "Klik om een ander bestand te openen",
+    "side.title": "Verbindingen",
+    "side.new": "Nieuwe verbinding",
+    "side.copy": "Dupliceren",
+    "side.copy.tt": "De geselecteerde verbinding dupliceren",
+    "side.delete": "Verwijderen",
+    "side.delete.tt": "De geselecteerde verbinding verwijderen",
+    "side.noaddr": "Nog geen adres",
+    "side.legacy.tt": "Bevat een instelling die ARC-1 niet meer accepteert; moet worden gecorrigeerd.",
+    "side.other": "Andere MCP-servers",
+    "side.other.tt": "Geen ARC-1-server; blijft ongewijzigd",
+    "side.stored.tt": "Het wachtwoord staat in de referentieopslag van het besturingssysteem",
+    "welcome.title": "Welkom",
+    "welcome.text": "Open om te beginnen het .mcp.json-bestand dat Claude Code gebruikt, of maak een nieuw bestand met een voorbeeldverbinding.",
+    "welcome.hint": "Claude Code zoekt .mcp.json in de projectmap waarin het wordt gestart (bijvoorbeeld uw Eclipse-workspace).",
+    "welcome.open": "Bestaand bestand openen",
+    "welcome.open.desc": "Kies een .mcp.json-bestand op uw computer.",
+    "welcome.new": "Nieuw bestand maken",
+    "welcome.new.desc": "Een .mcp.json maken met een ARC-1-voorbeeldverbinding.",
+    "welcome.missing": "Het laatst gebruikte bestand is niet gevonden: {0}",
+    "welcome.recent": "Recente bestanden",
+    "welcome.shortcut": "Snelkoppeling op bureaublad maken",
+    "welcome.shortcut.tt": "Voegt een snelkoppeling toe die deze app met npx start (bureaublad en Startmenu)",
+    "empty.title": "Nog geen verbindingen",
+    "empty.text": "Voeg uw eerste SAP-systeem toe met de knop Nieuwe verbinding linksonder.",
+    "ed.name.tt": "Klik om de verbinding te hernoemen",
+    "ed.system": "Systeem: {0}",
+    "ed.noaddr": "Serveradres nog niet ingevoerd",
+    "ed.test": "Verbinding testen",
+    "ed.test.tt": "Proberen aan te melden bij de SAP ADT-service",
+    "ed.validate": "Controleren met ARC-1",
+    "ed.validate.tt": "Laat ARC-1 zelf deze instellingen controleren, met de ARC-1-versie die deze verbinding gebruikt",
+    "ed.conn": "SAP-verbinding",
+    "ed.settings": "Instellingen",
+    "ed.settings.desc": "Alleen de instellingen die u toevoegt, worden in het bestand geschreven. Voor de rest gelden de standaardwaarden van ARC-1.",
+    "ed.add": "Instelling toevoegen",
+    "ed.advanced": "Geavanceerd",
+    "ed.cmd": "Startopdracht",
+    "ed.cmd.help": "Hoe de MCP-client ARC-1 start. Om een versie vast te zetten, schrijft u arc-1@1.10.1 in plaats van arc-1.",
+    "ed.cmd.written": "Zo in het bestand geschreven:",
+    "other.title": "Geen ARC-1-server",
+    "other.text": "Deze vermelding hoort bij een andere MCP-server. Bij het opslaan blijft ze precies zoals ze is.",
+    "other.cmd": "Opdracht",
+    "f.url": "Serveradres",
+    "f.url.help": "Met protocol en poort, bijv. https://sap-host:44300",
+    "f.user": "Gebruiker",
+    "f.user.help": "Uw SAP-gebruikersnaam.",
+    "f.pwd": "Wachtwoord",
+    "f.pwd.help": "Wordt als platte tekst in het bestand opgeslagen.",
+    "f.pwd.help.store": "Versleuteld in {0}. Het bestand bevat geen wachtwoord.",
+    "f.client": "Mandant",
+    "f.client.help": "3 cijfers. Leeg betekent 100.",
+    "f.lang": "Taal",
+    "f.lang.help": "Leeg betekent EN. Ook de oorspronkelijke taal van nieuwe objecten.",
+    "pwd.show": "Wachtwoord tonen",
+    "pwd.hide": "Wachtwoord verbergen",
+    "pwd.mode.store": "Referentieopslag",
+    "pwd.mode.file": "In bestand",
+    "pwd.mode.store.tt": "Aanbevolen: het besturingssysteem bewaart het wachtwoord versleuteld; .mcp.json start ARC-1 alleen via deze app.",
+    "pwd.mode.file.tt": "Platte tekst in .mcp.json. Werkt overal, maar wie het bestand kan lezen, kan ook het wachtwoord lezen.",
+    "pwd.na": "De referentieopslag is op deze computer niet beschikbaar: {0}",
+    "pwd.ph.stored": "Opgeslagen in de referentieopslag",
+    "pwd.ph.none": "Nog niet opgeslagen – typ het wachtwoord",
+    "store.windows": "Windows Referentiebeheer",
+    "store.macos": "de macOS-sleutelhanger",
+    "store.linux": "de Secret Service (GNOME Keyring / KWallet)",
+    "set.on": "Aan",
+    "set.off": "Uit",
+    "set.default": "Standaard: {0}",
+    "set.empty": "leeg",
+    "set.default.tt": "Standaard",
+    "set.invalid.bool": "Ongeldige waarde '{0}'; ARC-1 beschouwt dit als uit.",
+    "set.invalid.enum": "Ongeldige waarde '{0}'; ARC-1 gebruikt de standaardwaarde.",
+    "set.invalid.int": "'{0}' is geen geheel getal.",
+    "set.invalid.range": "Toegestaan bereik: {0}–{1}.",
+    "set.invalid.pattern": "'{0}' heeft niet de verwachte notatie.",
+    "set.invalid.length": "Maximaal {0} tekens.",
+    "set.invalid.list": "Bevat een lege vermelding (twee komma's achter elkaar).",
+    "set.fatal": "Met deze waarde start ARC-1 niet.",
+    "set.remove.tt": "Deze instelling verwijderen (standaard van ARC-1 geldt)",
+    "set.browse.tt": "Een bestand kiezen",
+    "set.none": "Geen extra instellingen. ARC-1 draait met alle standaardwaarden: alleen lezen, alleen pakket $TMP.",
+    "set.legacy.title": "Verwijderde instelling",
+    "set.legacy.help": "ARC-1 start niet zolang deze instelling aanwezig is.",
+    "set.legacy.use": "Gebruik in plaats daarvan '{0}' ({1}).",
+    "set.legacy.inverted": "De betekenis is omgekeerd.",
+    "set.legacy.current": "Huidige waarde: {0}",
+    "set.legacy.convert": "Omzetten: {0}",
+    "set.arc1says": "Melding van ARC-1: {0}",
+    "legacy.denyactions": "Gebruik in plaats daarvan 'Verboden acties' (SAP_DENY_ACTIONS).",
+    "legacy.profile": "Profielen zijn verwijderd; voeg rechten één voor één toe.",
+    "legacy.apikey": "Verwijderd (ARC1_API_KEYS wordt alleen in HTTP-modus gebruikt).",
+    "legacy.removed": "Verwijderd.",
+    "set.unknown.title": "Onbekende instelling",
+    "set.unknown.help": "ARC-1 kent deze instelling niet en negeert haar daarom.",
+    "set.unknown.typo": "Bedoelde u {0}?",
+    "set.unknown.rename": "Hernoemen naar {0}",
+    "set.ignored.title": "Genegeerde instelling",
+    "set.ignored.help": "ARC-1 negeert deze instelling. U kunt haar verwijderen.",
+    "set.server.title": "Serverinstelling",
+    "set.server.help": "Vooral gebruikt wanneer ARC-1 als gedeelde HTTP-/BTP-server draait.",
+    "grp.legacy": "Te corrigeren instellingen",
+    "grp.other": "Overig",
+    "feat.help": "auto: aan als het systeem het ondersteunt · on: afdwingen · off: uitschakelen.",
+    "issue.cmdwin": "Onder Windows kan Claude Code npx alleen via cmd /c starten.",
+    "issue.fix": "Herstellen",
+    "add.title": "Instelling toevoegen",
+    "add.hint": "Zoek op naam, sleutel of beschrijving. Gebruik ↑ ↓ om te navigeren, Enter of dubbelklik om toe te voegen.",
+    "add.nomatch": "Geen overeenkomende instellingen die nog niet zijn toegevoegd.",
+    "dlg.close.tt": "Sluiten (Esc)",
+    "dlg.ok": "OK",
+    "dlg.cancel": "Annuleren",
+    "dlg.yes": "Ja",
+    "dlg.no": "Nee",
+    "dlg.save": "Opslaan",
+    "dlg.dontsave": "Niet opslaan",
+    "dlg.overwrite": "Overschrijven",
+    "dlg.reload": "Opnieuw laden",
+    "dlg.saveanyway": "Toch opslaan",
+    "dlg.replace": "Vervangen",
+    "dlg.openit": "Openen",
+    "lang.title": "Taal",
+    "foot.save": "Opslaan",
+    "foot.save.tt": "Opslaan (Ctrl+S)",
+    "foot.dirty": "Niet-opgeslagen wijzigingen",
+    "st.loaded": "{0} verbinding(en) geladen.",
+    "st.legacy": "{0}: bevat oude instellingen die ARC-1 niet meer accepteert. Open de verbinding en klik op 'Omzetten'.",
+    "st.saved": "Opgeslagen om {0}. Back-up: {1}. Start Claude Code opnieuw om de wijzigingen toe te passen.",
+    "st.removed": "{0} verwijderd (vergeet niet op te slaan)",
+    "st.converted": "{0} → {1} = {2} omgezet (vergeet niet op te slaan)",
+    "st.added": "'{0}' toegevoegd (vergeet niet op te slaan)",
+    "st.newconn": "Nieuwe verbinding toegevoegd: {0} (vergeet niet op te slaan)",
+    "st.copied": "'{0}' gedupliceerd → {1} (vergeet niet op te slaan)",
+    "st.deleted": "'{0}' verwijderd (vergeet niet op te slaan)",
+    "st.created": "Nieuw bestand gemaakt: {0}",
+    "st.renamed": "'{0}' hernoemd naar '{1}' (vergeet niet op te slaan)",
+    "st.reloaded": "Opnieuw geladen van schijf.",
+    "st.shortcut": "Snelkoppeling gemaakt: {0}",
+    "msg.name.empty": "De naam van de verbinding mag niet leeg zijn.",
+    "msg.name.exists": "Er bestaat al een verbinding met de naam '{0}'.",
+    "msg.read.fail": "Het bestand kon niet worden gelezen:\n{0}",
+    "msg.legacy.save": "Deze verbindingen bevatten instellingen die ARC-1 niet meer accepteert:\n\n{0}\n\nZo start ARC-1 er niet voor. Toch opslaan?",
+    "msg.save.fail": "Opslaan mislukt:\n{0}",
+    "msg.unsaved": "Er zijn niet-opgeslagen wijzigingen. Opslaan?",
+    "msg.delete": "Verbinding '{0}' verwijderen?",
+    "msg.url.first": "Voer eerst het serveradres in.",
+    "msg.conflict": "Het bestand is na het openen buiten deze app gewijzigd. Die wijzigingen overschrijven, of het bestand opnieuw laden en uw eigen wijzigingen verliezen?",
+    "msg.exists": "{0} bestaat al. Openen, of vervangen door een nieuw voorbeeldbestand? (Het oude bestand blijft bewaard als .bak.)",
+    "msg.store.fail": "Geen toegang tot de referentieopslag van het besturingssysteem:\n{0}",
+    "msg.store.need": "'{0}': vul eerst het serveradres en de gebruiker in. Het opgeslagen wachtwoord is daaraan gekoppeld.",
+    "msg.pwd.missing": "'{0}': er staat nog geen wachtwoord in de referentieopslag. Typ eerst het wachtwoord.",
+    "msg.pwd.confirm": "Voor deze verbindingen is nog geen wachtwoord opgeslagen: {0}. ARC-1 kan pas bij SAP aanmelden als u er een invult. Toch opslaan?",
+    "msg.jsonc": "Dit bestand bevat opmerkingen. Bij opslaan wordt het als gewone JSON herschreven en gaan de opmerkingen verloren. Doorgaan?",
+    "msg.notjson": "Alleen .json-bestanden kunnen worden geopend.",
+    "msg.unexpected": "Er is iets misgegaan:\n{0}",
+    "msg.lost": "De verbinding met de app is verbroken. Als u de terminal hebt gesloten, start u de app opnieuw met: npx arc1-connection-manager",
+    "msg.bye": "De app is gestopt. U kunt dit venster sluiten.",
+    "msg.shortcut.fail": "De snelkoppeling kon niet worden gemaakt:\n{0}",
+    "ban.changed": "Dit bestand is buiten de app gewijzigd.",
+    "ban.missing": "Dit bestand bestaat niet meer op schijf. Bij opslaan wordt het opnieuw gemaakt.",
+    "ban.reload": "Opnieuw laden",
+    "ban.keep": "Mijn versie behouden",
+    "test.title": "Verbindingstest",
+    "test.running": "Verbinding wordt getest…",
+    "test.ok": "Verbinding geslaagd (HTTP {0}). De ADT-service is bereikbaar.",
+    "test.401": "Onjuiste gebruikersnaam of onjuist wachtwoord (HTTP 401).",
+    "test.403": "Aangemeld, maar geen bevoegdheid voor ADT (HTTP 403).",
+    "test.404": "ADT-service niet gevonden (HTTP 404). Is /sap/bc/adt actief in SICF?",
+    "test.redirect": "De server stuurde door naar een aanmeldpagina (HTTP {0}). Mogelijk is SAML / SSO actief; probeer 'SAML-omleiding uitschakelen'.",
+    "test.other": "De server retourneerde HTTP {0}.",
+    "test.fail": "Kan geen verbinding maken:\n{0}",
+    "test.ssl": "Het certificaat van de server wordt niet vertrouwd:\n{0}\n\nVoeg bij een zelfondertekend certificaat 'SSL-verificatie overslaan' toe via Instelling toevoegen.",
+    "test.notfound": "Server niet gevonden: {0}. Controleer het adres en uw netwerk / VPN.",
+    "test.refused": "{0} weigerde de verbinding. Controleer de poort.",
+    "test.timeout": "Geen antwoord binnen 15 seconden. Controleer het adres en uw netwerk / VPN.",
+    "test.badurl": "Het serveradres moet beginnen met http:// of https://.",
+    "val.title": "ARC-1-controle",
+    "val.running": "ARC-1 controleert de instellingen… De eerste keer kan een minuut duren terwijl npx ARC-1 downloadt.",
+    "val.ok": "ARC-1 {0} accepteert deze instellingen.",
+    "val.fail": "ARC-1 {0} start niet met deze instellingen:",
+    "val.error": "ARC-1 kon niet worden uitgevoerd:",
+    "val.timeout": "ARC-1 antwoordde niet op tijd. Controleer uw netwerkverbinding met de npm-registry.",
+    "val.nonpx": "npx is niet gevonden. ARC-1 heeft Node.js nodig; installeer het via nodejs.org.",
+    "val.policy": "Effectieve rechten",
+    "val.writes": "Schrijven",
+    "val.packages": "Beschrijfbare pakketten",
+    "val.transports": "Transporten schrijven",
+    "val.git": "Git schrijven",
+    "val.data": "Voorbeeld van tabelgegevens",
+    "val.sql": "Vrije SQL",
+    "val.deny": "Geblokkeerde acties",
+    "val.sources": "Geblokkeerde gegevensbronnen",
+    "val.allowed": "Toegestaan",
+    "val.blocked": "Geblokkeerd",
+    "val.none": "geen",
+    "val.warnings": "Waarschuwingen van ARC-1",
+    "fb.open.title": "MCP-configuratie openen",
+    "fb.new.title": "Nieuw bestand maken",
+    "fb.pick.title": "Een bestand kiezen",
+    "fb.places": "Locaties",
+    "fb.cwd": "Huidige map",
+    "fb.home": "Gebruikersmap",
+    "fb.desktop": "Bureaublad",
+    "fb.documents": "Documenten",
+    "fb.workspace": "Eclipse-workspace",
+    "fb.claude": "Claude Desktop-configuratie",
+    "fb.recent": "Recent",
+    "fb.drives": "Deze pc",
+    "fb.up": "Eén niveau omhoog",
+    "fb.go": "Ga",
+    "fb.path": "Pad",
+    "fb.empty": "Geen mappen of .json-bestanden hier.",
+    "fb.open": "Openen",
+    "fb.create": "Hier maken",
+    "fb.select": "Selecteren",
+    "fb.filename": "Bestandsnaam",
+    "fb.err": "Deze map kan niet worden geopend:\n{0}",
+    "fb.hint.open": "Kies .mcp.json of een andere MCP-configuratie zoals claude_desktop_config.json.",
+    "fb.hint.new": "Kies de projectmap waarin Claude Code wordt gestart. Het bestand wordt daar gemaakt."
+  },
+  "groups": {
+    "perm": "Rechten",
+    "quality": "Codekwaliteit",
+    "conn": "Verbinding (geavanceerd)",
+    "btp": "BTP",
+    "feat": "Functiedetectie",
+    "tools": "Hulpmiddelen",
+    "perf": "Prestaties",
+    "log": "Logboek",
+    "plugins": "Extensies"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "Schrijven toestaan",
+      "Objecten maken, wijzigen, verwijderen en activeren. Uit: ARC-1 leest alleen."
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "Beschrijfbare pakketten",
+      "Kommagescheiden: ZFOO (exact), Z* (voorvoegsel), ZFOO/** (met subpakketten), * (alle)."
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "Transporten schrijven",
+      "Transportopdrachten maken / vrijgeven. „Schrijven toestaan” moet ook aan staan."
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "Toegestane transportopdrachten",
+      "Schrijft alleen naar deze opdrachten, kommagescheiden (bijv. DEVK900123). Leeg = geen beperking."
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Git schrijven (abapGit / gCTS)",
+      "Push, pull enz. „Schrijven toestaan” moet ook aan staan."
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "Voorbeeld van tabelgegevens",
+      "Tabel- / CDS-gegevens lezen, vergelijkbaar met SE16."
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "Vrije SQL",
+      "Zelf geschreven SELECT-query's uitvoeren."
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "Geblokkeerde gegevensbronnen",
+      "Tabel- / CDS-namen waarvan de gegevens niet gelezen mogen worden, kommagescheiden (experimenteel)."
+    ],
+    "SAP_DENY_ACTIONS": [
+      "Verboden acties",
+      "Acties die afzonderlijk worden uitgeschakeld, kommagescheiden. Bijv. SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "abaplint vóór schrijven",
+      "abaplint uitvoeren voordat broncode naar SAP wordt geschreven."
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "SAP-syntaxcontrole vóór schrijven",
+      "Syntaxcontrole in SAP (waarschuwt, blokkeert niet)."
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "abaplint-configuratiebestand",
+      "Volledig pad naar een eigen abaplint.json."
+    ],
+    "SAP_INSECURE": [
+      "SSL-verificatie overslaan",
+      "Voor systemen met zelfondertekende certificaten."
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "Systeemtype",
+      "auto: detecteren · onprem: on-premises · btp: BTP ABAP Environment."
+    ],
+    "SAP_ABAP_RELEASE": [
+      "ABAP-release",
+      "SAP_BASIS-release voor abaplint (bijv. 758). Wordt normaal automatisch gedetecteerd."
+    ],
+    "SAP_DISABLE_SAML": [
+      "SAML-omleiding uitschakelen",
+      "Als de Basic-aanmelding blijft hangen op een SAML-omleiding. Niet gebruiken op BTP / S/4 Cloud."
+    ],
+    "SAP_COOKIE_FILE": [
+      "Cookiebestand",
+      "Pad naar een cookiebestand in Netscape-indeling (SSO-scenario's)."
+    ],
+    "SAP_COOKIE_STRING": [
+      "Cookietekst",
+      "Cookies als k=v; k2=v2 (alleen bij het starten gelezen)."
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "Clientnaam die naar SAP wordt gestuurd. Geen geheimen invullen."
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "Gegevensvoorbeeld-verzoeken comprimeren",
+      "Alleen als een web application firewall (WAF) problemen geeft."
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "Servicesleutelbestand",
+      "Pad naar de BTP ABAP-servicesleutel (JSON). Bij het eerste gebruik opent een aanmelding in de browser."
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "Servicesleutel (JSON-tekst)",
+      "De JSON-inhoud zelf in plaats van een bestand."
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "OAuth-callbackpoort",
+      "0 = automatisch."
+    ],
+    "ARC1_TOOL_MODE": [
+      "Hulpmiddelmodus",
+      "standard: 12 hulpmiddelen · hyperfocused: één hulpmiddel (zeer weinig tokens)."
+    ],
+    "ARC1_SERVER_NAME": [
+      "Servernaam",
+      "Naam die in de MCP-client wordt getoond. Geef elk systeem een andere naam."
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "Systeemlabel",
+      "Beschrijving van één regel voor het model (bijv. DEV 100). Max. 160 tekens."
+    ],
+    "ARC1_IDE_LINKS": [
+      "Eclipse-koppelingen",
+      "eclipse: voegt Eclipse ADT-koppelingen toe aan antwoorden (systeem-ID vereist)."
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "Systeem-ID (SID)",
+      "De echte SAP-SID van 3 tekens, in hoofdletters (bijv. DEV)."
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "Schemacompatibiliteit",
+      "auto volstaat voor Claude. on: strikte modus van OpenAI / Azure."
+    ],
+    "ARC1_UI": [
+      "Browserconsole",
+      "Experimentele, alleen-lezen weergave van de toestand van ARC-1 in de browser. local: op deze computer starten."
+    ],
+    "ARC1_UI_OPEN": [
+      "Browserconsole openen bij start",
+      "Opent de browserconsole automatisch wanneer ARC-1 start."
+    ],
+    "ARC1_UI_ADDR": [
+      "Adres van browserconsole",
+      "Adres en poort van de browserconsole. Moet op 127.0.0.1 blijven."
+    ],
+    "ARC1_UI_PORT": [
+      "Poort van browserconsole",
+      "Wijzigt alleen de poort van het adres van de browserconsole."
+    ],
+    "ARC1_CACHE": [
+      "Cache",
+      "auto · memory: in geheugen · sqlite: bestand · none: uit."
+    ],
+    "ARC1_CACHE_FILE": [
+      "Cachebestand",
+      "Bestandspad in sqlite-modus."
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "Gelijktijdige SAP-verzoeken",
+      "Maximaal aantal SAP-verzoeken dat tegelijk wordt verzonden."
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "Limiet gegevensantwoord (bytes)",
+      "Maximaal aantal bytes per gegevensopvraging (standaard 2 MB)."
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "Gelijktijdige gegevensresultaten",
+      "Maximaal aantal gegevensresultaten dat tegelijk wordt verwerkt."
+    ],
+    "ARC1_LOG_LEVEL": [
+      "Logniveau",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "Logindeling",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "Logbestand",
+      "Volledig pad van het bestand voor de logboeken."
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "HTTP-debuglogboek",
+      "Voegt details van verzoeken en antwoorden toe aan de logboeken. Gevoelige headers worden verborgen. Alleen voor probleemoplossing."
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "Korte foutmeldingen",
+      "Verbergt SAP-foutdetails voor het model."
+    ],
+    "SAP_VERBOSE": [
+      "Uitgebreide logging",
+      "Logt alle HTTP-verzoeken (logniveau wordt debug)."
+    ],
+    "ARC1_PLUGINS": [
+      "Extensiebestanden",
+      "Volledige paden van extensies, kommagescheiden (.js / .json)."
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "Extensies mogen ABAP uitvoeren",
+      "„Schrijven toestaan” moet ook aan staan."
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "Extensies mogen naar OData / ICF schrijven",
+      "„Schrijven toestaan” moet ook aan staan."
+    ]
+  }
+}

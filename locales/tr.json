@@ -1,0 +1,437 @@
+{
+  "name": "Türkçe",
+  "ui": {
+    "app.title": "ARC-1 MCP Bağlantı Yöneticisi",
+    "app.subtitle": "SAP ADT · MCP ayarları",
+    "top.open": "Dosya Aç",
+    "top.open.tt": "Mevcut bir .mcp.json dosyasını aç",
+    "top.new": "Yeni Dosya",
+    "top.new.tt": "Örnek bağlantı içeren yeni bir .mcp.json oluştur",
+    "top.reload": "Yeniden Yükle",
+    "top.reload.tt": "Dosyayı diskten yeniden oku",
+    "top.lang.tt": "Uygulama dili",
+    "top.light.tt": "Gündüz teması",
+    "top.dark.tt": "Gece teması",
+    "top.nofile": "Dosya seçilmedi",
+    "top.file.tt": "Başka bir dosya açmak için tıklayın",
+    "side.title": "Bağlantılar",
+    "side.new": "Yeni Bağlantı",
+    "side.copy": "Kopyala",
+    "side.copy.tt": "Seçili bağlantının kopyasını oluştur",
+    "side.delete": "Sil",
+    "side.delete.tt": "Seçili bağlantıyı sil",
+    "side.noaddr": "Adres girilmemiş",
+    "side.legacy.tt": "ARC-1'in artık kabul etmediği bir ayar var; düzeltilmeli.",
+    "side.other": "Diğer MCP Sunucuları",
+    "side.other.tt": "ARC-1 sunucusu değil; olduğu gibi korunur",
+    "side.stored.tt": "Şifre, işletim sisteminin kimlik bilgisi deposunda",
+    "welcome.title": "Hoş Geldiniz",
+    "welcome.text": "Başlamak için Claude Code'un kullandığı .mcp.json dosyasını açın ya da örnek bir bağlantı içeren yeni bir dosya oluşturun.",
+    "welcome.hint": "Claude Code, .mcp.json dosyasını başlatıldığı proje klasöründe arar (ör. Eclipse workspace klasörünüz).",
+    "welcome.open": "Mevcut Dosyayı Aç",
+    "welcome.open.desc": "Bilgisayarınızdaki bir .mcp.json dosyasını seçin.",
+    "welcome.new": "Yeni Dosya Oluştur",
+    "welcome.new.desc": "Örnek bir ARC-1 bağlantısı içeren .mcp.json oluşturun.",
+    "welcome.missing": "Son kullanılan dosya bulunamadı: {0}",
+    "welcome.recent": "Son Dosyalar",
+    "welcome.shortcut": "Masaüstü Kısayolu Oluştur",
+    "welcome.shortcut.tt": "Bu uygulamayı npx ile başlatan bir kısayol ekler (masaüstü ve Başlat menüsü)",
+    "empty.title": "Henüz Bağlantı Yok",
+    "empty.text": "Sol alttaki Yeni Bağlantı düğmesiyle ilk SAP sisteminizi ekleyin.",
+    "ed.name.tt": "Bağlantı adını değiştirmek için tıklayın",
+    "ed.system": "Sistem: {0}",
+    "ed.noaddr": "Sunucu adresi henüz girilmedi",
+    "ed.test": "Bağlantıyı Test Et",
+    "ed.test.tt": "SAP ADT servisine giriş yapmayı dene",
+    "ed.validate": "ARC-1 ile Kontrol Et",
+    "ed.validate.tt": "Bu ayarları, bağlantının kullandığı ARC-1 sürümünün kendisine kontrol ettirin",
+    "ed.conn": "SAP Bağlantısı",
+    "ed.settings": "Ayarlar",
+    "ed.settings.desc": "Yalnızca eklediğiniz ayarlar dosyaya yazılır. Eklenmeyenler için ARC-1'in varsayılanı geçerlidir.",
+    "ed.add": "Ayar Ekle",
+    "ed.advanced": "Gelişmiş",
+    "ed.cmd": "Başlatma Komutu",
+    "ed.cmd.help": "MCP istemcisinin ARC-1'i nasıl başlattığı. Sürümü sabitlemek için arc-1 yerine arc-1@1.10.1 yazın.",
+    "ed.cmd.written": "Dosyaya şöyle yazılır:",
+    "other.title": "ARC-1 Sunucusu Değil",
+    "other.text": "Bu kayıt başka bir MCP sunucusuna ait. Kaydettiğinizde olduğu gibi korunur.",
+    "other.cmd": "Komut",
+    "f.url": "Sunucu Adresi",
+    "f.url.help": "Protokol ve port ile birlikte, ör. https://sap-host:44300",
+    "f.user": "Kullanıcı",
+    "f.user.help": "SAP kullanıcı adınız.",
+    "f.pwd": "Şifre",
+    "f.pwd.help": "Dosyada düz metin olarak saklanır.",
+    "f.pwd.help.store": "{0} içinde şifreli saklanır. Dosyada şifre bulunmaz.",
+    "f.client": "Mandant",
+    "f.client.help": "3 haneli. Boş bırakılırsa 100 kullanılır.",
+    "f.lang": "Dil",
+    "f.lang.help": "Boş bırakılırsa EN. Yeni oluşturulan nesnelerin orijinal dili de budur.",
+    "pwd.show": "Şifreyi göster",
+    "pwd.hide": "Şifreyi gizle",
+    "pwd.mode.store": "Kimlik Deposu",
+    "pwd.mode.file": "Dosyada",
+    "pwd.mode.store.tt": "Önerilen: şifreyi işletim sistemi şifreli olarak saklar; .mcp.json ARC-1'i yalnızca bu uygulama üzerinden başlatır.",
+    "pwd.mode.file.tt": ".mcp.json içinde düz metin. Her yerde çalışır, ama dosyayı okuyabilen herkes şifreyi de okuyabilir.",
+    "pwd.na": "Bu bilgisayarda kimlik bilgisi deposu kullanılamıyor: {0}",
+    "pwd.ph.stored": "Kimlik bilgisi deposunda kayıtlı",
+    "pwd.ph.none": "Henüz kaydedilmedi – şifreyi yazın",
+    "store.windows": "Windows Kimlik Bilgileri Yöneticisi",
+    "store.macos": "macOS Anahtar Zinciri",
+    "store.linux": "Secret Service (GNOME Keyring / KWallet)",
+    "set.on": "Açık",
+    "set.off": "Kapalı",
+    "set.default": "Varsayılan: {0}",
+    "set.empty": "boş",
+    "set.default.tt": "Varsayılan",
+    "set.invalid.bool": "Geçersiz değer '{0}'; ARC-1 bunu kapalı sayar.",
+    "set.invalid.enum": "Geçersiz değer '{0}'; ARC-1 varsayılanı kullanır.",
+    "set.invalid.int": "'{0}' bir tam sayı değil.",
+    "set.invalid.range": "İzin verilen aralık: {0}–{1}.",
+    "set.invalid.pattern": "'{0}' beklenen biçimde değil.",
+    "set.invalid.length": "En fazla {0} karakter.",
+    "set.invalid.list": "Boş bir öğe içeriyor (art arda iki virgül).",
+    "set.fatal": "Bu değerle ARC-1 başlamaz.",
+    "set.remove.tt": "Bu ayarı kaldır (ARC-1 varsayılanı kullanılır)",
+    "set.browse.tt": "Dosya seçin",
+    "set.none": "Ek ayar yok. ARC-1 tüm varsayılanlarla çalışır: salt okuma, yalnızca $TMP paketi.",
+    "set.legacy.title": "Kaldırılmış Ayar",
+    "set.legacy.help": "ARC-1 bu ayar tanımlıyken başlamaz.",
+    "set.legacy.use": "Yerine '{0}' ({1}) kullanılır.",
+    "set.legacy.inverted": "Anlamı terstir.",
+    "set.legacy.current": "Mevcut değer: {0}",
+    "set.legacy.convert": "Dönüştür: {0}",
+    "set.arc1says": "ARC-1'in mesajı: {0}",
+    "legacy.denyactions": "Yerine 'Yasaklı İşlemler' (SAP_DENY_ACTIONS) kullanın.",
+    "legacy.profile": "Profiller kaldırıldı; izinleri tek tek ekleyin.",
+    "legacy.apikey": "Kaldırıldı (ARC1_API_KEYS yalnızca HTTP modunda kullanılır).",
+    "legacy.removed": "Kaldırıldı.",
+    "set.unknown.title": "Tanınmayan Ayar",
+    "set.unknown.help": "ARC-1 bu ayarı tanımıyor, bu yüzden yok sayılır.",
+    "set.unknown.typo": "{0} mı demek istediniz?",
+    "set.unknown.rename": "{0} olarak değiştir",
+    "set.ignored.title": "Yok Sayılan Ayar",
+    "set.ignored.help": "ARC-1 bu ayarı yok sayar. Kaldırabilirsiniz.",
+    "set.server.title": "Sunucu Ayarı",
+    "set.server.help": "Çoğunlukla ARC-1 ortak bir HTTP / BTP sunucusu olarak çalıştığında kullanılır.",
+    "grp.legacy": "Düzeltilmesi Gereken Ayarlar",
+    "grp.other": "Diğer",
+    "feat.help": "auto: sistemde varsa açılır · on: zorla aç · off: kapat.",
+    "issue.cmdwin": "Windows'ta Claude Code, npx'i yalnızca cmd /c üzerinden başlatabilir.",
+    "issue.fix": "Düzelt",
+    "add.title": "Ayar Ekle",
+    "add.hint": "Ada, anahtara veya açıklamaya göre arayın. ↑ ↓ ile gezin, Enter ya da çift tıklama ile ekleyin.",
+    "add.nomatch": "Eşleşen (henüz eklenmemiş) ayar yok.",
+    "dlg.close.tt": "Kapat (Esc)",
+    "dlg.ok": "Tamam",
+    "dlg.cancel": "İptal",
+    "dlg.yes": "Evet",
+    "dlg.no": "Hayır",
+    "dlg.save": "Kaydet",
+    "dlg.dontsave": "Kaydetme",
+    "dlg.overwrite": "Üzerine Yaz",
+    "dlg.reload": "Yeniden Yükle",
+    "dlg.saveanyway": "Yine de Kaydet",
+    "dlg.replace": "Değiştir",
+    "dlg.openit": "Onu Aç",
+    "lang.title": "Dil",
+    "foot.save": "Kaydet",
+    "foot.save.tt": "Kaydet (Ctrl+S)",
+    "foot.dirty": "Kaydedilmemiş değişiklik var",
+    "st.loaded": "{0} bağlantı yüklendi.",
+    "st.legacy": "{0}: ARC-1'in kabul etmediği eski ayarlar var. Bağlantıyı açıp 'Dönüştür' deyin.",
+    "st.saved": "{0} itibarıyla kaydedildi. Yedek: {1}. Değişikliklerin geçmesi için Claude Code'u yeniden başlatın.",
+    "st.removed": "{0} kaldırıldı (kaydetmeyi unutmayın)",
+    "st.converted": "{0} → {1} = {2} olarak dönüştürüldü (kaydetmeyi unutmayın)",
+    "st.added": "'{0}' eklendi (kaydetmeyi unutmayın)",
+    "st.newconn": "Yeni bağlantı eklendi: {0} (kaydetmeyi unutmayın)",
+    "st.copied": "'{0}' kopyalandı → {1} (kaydetmeyi unutmayın)",
+    "st.deleted": "'{0}' silindi (kaydetmeyi unutmayın)",
+    "st.created": "Yeni dosya oluşturuldu: {0}",
+    "st.renamed": "'{0}' adı '{1}' olarak değiştirildi (kaydetmeyi unutmayın)",
+    "st.reloaded": "Diskten yeniden yüklendi.",
+    "st.shortcut": "Kısayol oluşturuldu: {0}",
+    "msg.name.empty": "Bağlantı adı boş olamaz.",
+    "msg.name.exists": "'{0}' adında bir bağlantı zaten var.",
+    "msg.read.fail": "Dosya okunamadı:\n{0}",
+    "msg.legacy.save": "Şu bağlantılarda ARC-1'in artık kabul etmediği ayarlar var:\n\n{0}\n\nBu haliyle ARC-1 o bağlantılarda başlamaz. Yine de kaydedilsin mi?",
+    "msg.save.fail": "Kaydedilemedi:\n{0}",
+    "msg.unsaved": "Kaydedilmemiş değişiklikler var. Kaydedilsin mi?",
+    "msg.delete": "'{0}' bağlantısı silinsin mi?",
+    "msg.url.first": "Önce sunucu adresini girin.",
+    "msg.conflict": "Dosya, siz açtıktan sonra bu uygulamanın dışında değiştirildi. O değişikliklerin üzerine mi yazılsın, yoksa dosya yeniden yüklensin ve sizin değişiklikleriniz mi kaybolsun?",
+    "msg.exists": "{0} zaten var. Onu açmak mı, yoksa yeni bir örnek dosyayla değiştirmek mi istersiniz? (Eski dosya .bak olarak saklanır.)",
+    "msg.store.fail": "İşletim sisteminin kimlik bilgisi deposuna erişilemedi:\n{0}",
+    "msg.store.need": "'{0}': önce sunucu adresini ve kullanıcıyı girin. Saklanan şifre bunlara bağlıdır.",
+    "msg.pwd.missing": "'{0}': kimlik bilgisi deposunda henüz şifre yok. Önce şifreyi yazın.",
+    "msg.pwd.confirm": "Şu bağlantılar için henüz şifre kaydedilmedi: {0}. Şifre girilene kadar ARC-1 SAP'ye giriş yapamaz. Yine de kaydedilsin mi?",
+    "msg.jsonc": "Bu dosyada yorum satırları var. Kaydetmek dosyayı düz JSON olarak yeniden yazar ve yorumlar kaybolur. Devam edilsin mi?",
+    "msg.notjson": "Yalnızca .json dosyaları açılabilir.",
+    "msg.unexpected": "Bir şeyler ters gitti:\n{0}",
+    "msg.lost": "Uygulamayla bağlantı kesildi. Terminalini kapattıysanız şu komutla yeniden başlatın: npx arc1-connection-manager",
+    "msg.bye": "Uygulama durdu. Bu pencereyi kapatabilirsiniz.",
+    "msg.shortcut.fail": "Kısayol oluşturulamadı:\n{0}",
+    "ban.changed": "Bu dosya uygulamanın dışında değiştirildi.",
+    "ban.missing": "Bu dosya artık diskte yok. Kaydettiğinizde yeniden oluşturulur.",
+    "ban.reload": "Yeniden Yükle",
+    "ban.keep": "Benim Sürümümü Koru",
+    "test.title": "Bağlantı Testi",
+    "test.running": "Bağlantı test ediliyor…",
+    "test.ok": "Bağlantı başarılı (HTTP {0}). ADT servisine erişilebiliyor.",
+    "test.401": "Kullanıcı adı veya şifre hatalı (HTTP 401).",
+    "test.403": "Giriş başarılı ama ADT için yetki yok (HTTP 403).",
+    "test.404": "ADT servisi bulunamadı (HTTP 404). SICF'de /sap/bc/adt aktif mi?",
+    "test.redirect": "Sunucu bir oturum açma sayfasına yönlendirdi (HTTP {0}). SAML / SSO etkin olabilir; 'SAML Yönlendirmesini Kapat' ayarını deneyin.",
+    "test.other": "Sunucu HTTP {0} döndürdü.",
+    "test.fail": "Bağlanılamadı:\n{0}",
+    "test.ssl": "Sunucunun sertifikasına güvenilmiyor:\n{0}\n\nKendinden imzalı sertifika ise Ayar Ekle ile 'SSL Doğrulamasını Atla' ayarını ekleyin.",
+    "test.notfound": "Sunucu bulunamadı: {0}. Adresi ve ağ / VPN bağlantınızı kontrol edin.",
+    "test.refused": "{0} bağlantıyı reddetti. Port numarasını kontrol edin.",
+    "test.timeout": "15 saniye içinde yanıt gelmedi. Adresi ve ağ / VPN bağlantınızı kontrol edin.",
+    "test.badurl": "Sunucu adresi http:// veya https:// ile başlamalıdır.",
+    "val.title": "ARC-1 Kontrolü",
+    "val.running": "ARC-1 ayarları kontrol ediyor… İlk kontrol, npx ARC-1'i indirirken bir dakika kadar sürebilir.",
+    "val.ok": "ARC-1 {0} bu ayarları kabul ediyor.",
+    "val.fail": "ARC-1 {0} bu ayarlarla başlamaz:",
+    "val.error": "ARC-1 çalıştırılamadı:",
+    "val.timeout": "ARC-1 zamanında yanıt vermedi. npm kayıt sunucusuna olan ağ bağlantınızı kontrol edin.",
+    "val.nonpx": "npx bulunamadı. ARC-1 için Node.js gerekir; nodejs.org adresinden kurun.",
+    "val.policy": "Etkin İzinler",
+    "val.writes": "Yazma",
+    "val.packages": "Yazılabilir paketler",
+    "val.transports": "Transport yazma",
+    "val.git": "Git yazma",
+    "val.data": "Tablo verisi önizleme",
+    "val.sql": "Serbest SQL",
+    "val.deny": "Engellenen eylemler",
+    "val.sources": "Engellenen veri kaynakları",
+    "val.allowed": "İzinli",
+    "val.blocked": "Kapalı",
+    "val.none": "yok",
+    "val.warnings": "ARC-1 uyarıları",
+    "fb.open.title": "MCP Yapılandırmasını Aç",
+    "fb.new.title": "Yeni Dosya Oluştur",
+    "fb.pick.title": "Dosya Seçin",
+    "fb.places": "Konumlar",
+    "fb.cwd": "Geçerli Klasör",
+    "fb.home": "Kullanıcı Klasörü",
+    "fb.desktop": "Masaüstü",
+    "fb.documents": "Belgeler",
+    "fb.workspace": "Eclipse Çalışma Alanı",
+    "fb.claude": "Claude Desktop Ayarları",
+    "fb.recent": "Son Kullanılanlar",
+    "fb.drives": "Bu Bilgisayar",
+    "fb.up": "Bir üst klasör",
+    "fb.go": "Git",
+    "fb.path": "Yol",
+    "fb.empty": "Burada klasör veya .json dosyası yok.",
+    "fb.open": "Aç",
+    "fb.create": "Burada Oluştur",
+    "fb.select": "Seç",
+    "fb.filename": "Dosya adı",
+    "fb.err": "Bu klasör açılamıyor:\n{0}",
+    "fb.hint.open": ".mcp.json dosyasını ya da claude_desktop_config.json gibi başka bir MCP yapılandırmasını seçin.",
+    "fb.hint.new": "Claude Code'u başlattığınız proje klasörünü seçin. Dosya orada oluşturulur."
+  },
+  "groups": {
+    "perm": "İzinler",
+    "quality": "Kod Kalitesi",
+    "conn": "Bağlantı (Gelişmiş)",
+    "btp": "BTP",
+    "feat": "Özellik Algılama",
+    "tools": "Araçlar",
+    "perf": "Performans",
+    "log": "Günlük (Log)",
+    "plugins": "Eklentiler"
+  },
+  "cat": {
+    "SAP_ALLOW_WRITES": [
+      "Yazma İzni",
+      "Nesne oluşturma, değiştirme, silme ve aktivasyon. Kapalıyken ARC-1 yalnızca okur."
+    ],
+    "SAP_ALLOWED_PACKAGES": [
+      "Yazılabilir Paketler",
+      "Virgülle: ZFOO (tam ad), Z* (önek), ZFOO/** (alt paketler dahil), * (tümü)."
+    ],
+    "SAP_ALLOW_TRANSPORT_WRITES": [
+      "Transport Yazma",
+      "Transport isteği oluşturma / serbest bırakma. Yazma izni de açık olmalı."
+    ],
+    "SAP_ALLOWED_TRANSPORTS": [
+      "İzinli Transport İstekleri",
+      "Yalnızca bu isteklere yazılır, virgülle (ör. DEVK900123). Boşsa sınır yok."
+    ],
+    "SAP_ALLOW_GIT_WRITES": [
+      "Git Yazma (abapGit / gCTS)",
+      "Push, pull vb. Yazma izni de açık olmalı."
+    ],
+    "SAP_ALLOW_DATA_PREVIEW": [
+      "Tablo İçeriği Önizleme",
+      "SE16 benzeri tablo / CDS veri okuma."
+    ],
+    "SAP_ALLOW_FREE_SQL": [
+      "Serbest SQL",
+      "Elle yazılmış SELECT sorgularını çalıştırma."
+    ],
+    "SAP_BLOCKED_DATA_SOURCES": [
+      "Engelli Veri Kaynakları",
+      "Veri okuması yasaklanan tablo / CDS adları, virgülle (deneysel)."
+    ],
+    "SAP_DENY_ACTIONS": [
+      "Yasaklı İşlemler",
+      "Tek tek kapatılacak işlemler, virgülle. Ör: SAPWrite.delete, SAPManage.flp_*"
+    ],
+    "SAP_LINT_BEFORE_WRITE": [
+      "Yazmadan Önce abaplint",
+      "Kaynak kod SAP'ye yazılmadan önce abaplint kontrolü."
+    ],
+    "SAP_CHECK_BEFORE_WRITE": [
+      "Yazmadan Önce SAP Sözdizimi Kontrolü",
+      "SAP tarafında sözdizimi kontrolü (engellemez, uyarır)."
+    ],
+    "SAP_ABAPLINT_CONFIG": [
+      "abaplint Ayar Dosyası",
+      "Özel abaplint.json dosyasının tam yolu."
+    ],
+    "SAP_INSECURE": [
+      "SSL Doğrulamasını Atla",
+      "Kendinden imzalı sertifikalı sistemlerde kullanın."
+    ],
+    "SAP_SYSTEM_TYPE": [
+      "Sistem Tipi",
+      "auto: otomatik algıla · onprem: şirket içi · btp: BTP ABAP Environment."
+    ],
+    "SAP_ABAP_RELEASE": [
+      "ABAP Sürümü",
+      "abaplint için SAP_BASIS sürümü (ör. 758). Normalde otomatik algılanır."
+    ],
+    "SAP_DISABLE_SAML": [
+      "SAML Yönlendirmesini Kapat",
+      "Basic giriş SAML yönlendirmesine takılıyorsa. BTP / S/4 Cloud'da kullanmayın."
+    ],
+    "SAP_COOKIE_FILE": [
+      "Çerez Dosyası",
+      "Netscape formatında çerez dosyası yolu (SSO senaryoları)."
+    ],
+    "SAP_COOKIE_STRING": [
+      "Çerez Metni",
+      "k=v; k2=v2 biçiminde çerezler (yalnızca açılışta okunur)."
+    ],
+    "SAP_USER_AGENT": [
+      "User-Agent",
+      "SAP'ye gönderilen istemci adı. Gizli bilgi yazmayın."
+    ],
+    "SAP_GZIP_DATAPREVIEW_BODY": [
+      "Veri Önizleme İsteğini Sıkıştır",
+      "Yalnızca araya giren güvenlik duvarı (WAF) sorun çıkarıyorsa."
+    ],
+    "SAP_BTP_SERVICE_KEY_FILE": [
+      "Service Key Dosyası",
+      "BTP ABAP service key JSON dosyasının yolu. İlk kullanımda tarayıcıda giriş açılır."
+    ],
+    "SAP_BTP_SERVICE_KEY": [
+      "Service Key (JSON Metni)",
+      "Dosya yerine JSON içeriğinin kendisi."
+    ],
+    "SAP_BTP_OAUTH_CALLBACK_PORT": [
+      "OAuth Geri Dönüş Portu",
+      "0 = otomatik."
+    ],
+    "ARC1_TOOL_MODE": [
+      "Araç Modu",
+      "standard: 12 araç · hyperfocused: tek araç (çok az token)."
+    ],
+    "ARC1_SERVER_NAME": [
+      "Sunucu Adı",
+      "MCP istemcisinde görünen ad. Birden çok sistem bağlıysa her birine farklı ad verin."
+    ],
+    "ARC1_SYSTEM_LABEL": [
+      "Sistem Etiketi",
+      "Modele gösterilen tek satırlık açıklama (ör. DEV 100). En fazla 160 karakter."
+    ],
+    "ARC1_IDE_LINKS": [
+      "Eclipse Bağlantıları",
+      "eclipse: yanıtlarda Eclipse ADT linkleri üretir (Sistem ID gerekir)."
+    ],
+    "ARC1_IDE_SYSTEM_ID": [
+      "Sistem ID (SID)",
+      "Gerçek 3 karakterlik SAP SID, büyük harf (ör. DEV)."
+    ],
+    "ARC1_SCHEMA_NULLABLE_OPTIONALS": [
+      "Şema Uyumluluğu",
+      "Claude için auto yeterli. on: OpenAI / Azure strict mod uyumu."
+    ],
+    "ARC1_UI": [
+      "Tarayıcı Konsolu",
+      "ARC-1'in durumunu tarayıcıda gösteren deneysel, salt okunur görünüm. local: bu bilgisayarda başlatır."
+    ],
+    "ARC1_UI_OPEN": [
+      "Başlangıçta Tarayıcı Konsolunu Aç",
+      "ARC-1 başladığında tarayıcı konsolunu otomatik olarak açar."
+    ],
+    "ARC1_UI_ADDR": [
+      "Tarayıcı Konsolu Adresi",
+      "Tarayıcı konsolunun adresi ve portu. 127.0.0.1 üzerinde kalmalıdır."
+    ],
+    "ARC1_UI_PORT": [
+      "Tarayıcı Konsolu Portu",
+      "Tarayıcı konsolu adresinin yalnızca portunu değiştirir."
+    ],
+    "ARC1_CACHE": [
+      "Önbellek",
+      "auto · memory: bellek · sqlite: dosya · none: kapalı."
+    ],
+    "ARC1_CACHE_FILE": [
+      "Önbellek Dosyası",
+      "sqlite modunda kullanılacak dosya yolu."
+    ],
+    "ARC1_MAX_CONCURRENT": [
+      "Eşzamanlı SAP İsteği",
+      "Aynı anda gönderilecek en fazla SAP isteği."
+    ],
+    "ARC1_MAX_DATAPREVIEW_RESPONSE_BYTES": [
+      "Veri Yanıtı Üst Sınırı (Bayt)",
+      "Bir veri okumasında en fazla bayt (varsayılan 2 MB)."
+    ],
+    "ARC1_MAX_CONCURRENT_DATA_RESULTS": [
+      "Eşzamanlı Veri Sonucu",
+      "Aynı anda işlenen en fazla veri sonucu."
+    ],
+    "ARC1_LOG_LEVEL": [
+      "Log Seviyesi",
+      ""
+    ],
+    "ARC1_LOG_FORMAT": [
+      "Log Formatı",
+      ""
+    ],
+    "ARC1_LOG_FILE": [
+      "Log Dosyası",
+      "Logların yazılacağı dosyanın tam yolu."
+    ],
+    "ARC1_LOG_HTTP_DEBUG": [
+      "HTTP Hata Ayıklama Günlüğü",
+      "İstek ve yanıt ayrıntılarını günlüğe ekler. Hassas başlıklar gizlenir. Yalnızca sorun giderme içindir."
+    ],
+    "ARC1_MINIMAL_ERRORS": [
+      "Kısa Hata Mesajları",
+      "SAP hata ayrıntılarını modelden gizler."
+    ],
+    "SAP_VERBOSE": [
+      "Ayrıntılı Log",
+      "Tüm HTTP isteklerini loglar (log seviyesi debug olur)."
+    ],
+    "ARC1_PLUGINS": [
+      "Eklenti Dosyaları",
+      "Eklentilerin tam yolları, virgülle (.js / .json)."
+    ],
+    "SAP_ALLOW_PLUGIN_EXECUTE": [
+      "Eklenti ABAP Çalıştırabilir",
+      "Yazma izni de açık olmalı."
+    ],
+    "SAP_ALLOW_PLUGIN_RAW_WRITES": [
+      "Eklenti OData / ICF Yazabilir",
+      "Yazma izni de açık olmalı."
+    ]
+  }
+}

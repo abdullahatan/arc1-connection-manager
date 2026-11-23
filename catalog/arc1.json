@@ -1,7 +1,11 @@
 {
-  "arc1Version": "1.10.1",
-  "generatedFrom": "arc-1@1.10.1 (dist/)",
+  "arc1Version": "1.11.0",
+  "generatedFrom": "arc-1@1.11.0 (dist/)",
   "env": {
+    "ARC1_ALLOWED_CLIENT_IPS": {
+      "kind": "raw",
+      "default": null
+    },
     "ARC1_ALLOWED_ORIGINS": {
       "kind": "raw",
       "default": null,
@@ -399,17 +403,6 @@
       ],
       "description": "abapGit feature toggle: auto/on/off"
     },
-    "SAP_FEATURE_AMDP": {
-      "kind": "feature",
-      "default": "auto",
-      "flag": "feature-amdp",
-      "options": [
-        "auto",
-        "on",
-        "off"
-      ],
-      "description": "AMDP feature toggle: auto/on/off"
-    },
     "SAP_FEATURE_FLP": {
       "kind": "feature",
       "default": "auto",
@@ -563,6 +556,64 @@
       "flag": "pp-enabled",
       "description": "Enable principal propagation (true/false)"
     },
+    "SAP_PP_SAML_AUDIENCE": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-audience",
+      "description": "Experimental: SAML audience (SAP local provider name)"
+    },
+    "SAP_PP_SAML_AUTHN_CONTEXT": {
+      "kind": "string",
+      "default": "urn:oasis:names:tc:SAML:2.0:ac:classes:PreviousSession",
+      "flag": "pp-saml-authn-context",
+      "description": "Experimental: AuthnContextClassRef URI"
+    },
+    "SAP_PP_SAML_IDP_CERT_FILE": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-idp-cert-file",
+      "description": "Experimental: PEM certificate trusted by the SAP system"
+    },
+    "SAP_PP_SAML_IDP_KEY_FILE": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-idp-key-file",
+      "description": "Experimental: PEM key signing local SAML bearer assertions"
+    },
+    "SAP_PP_SAML_ISSUER": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-issuer",
+      "description": "Experimental: SAML issuer / entity ID"
+    },
+    "SAP_PP_SAML_NAMEID_CLAIM": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-nameid-claim",
+      "description": "Experimental: JWT claim used as SAML NameID"
+    },
+    "SAP_PP_SAML_NAMEID_FORMAT": {
+      "kind": "string",
+      "default": "email",
+      "flag": "pp-saml-nameid-format",
+      "options": [
+        "email",
+        "unspecified"
+      ],
+      "description": "Experimental: email or unspecified"
+    },
+    "SAP_PP_SAML_RECIPIENT": {
+      "kind": "string",
+      "default": "",
+      "flag": "pp-saml-recipient",
+      "description": "Experimental: SAML recipient (default SAP URL)"
+    },
+    "SAP_PP_SAML_TTL_SECONDS": {
+      "kind": "int",
+      "default": "300",
+      "flag": "pp-saml-ttl-seconds",
+      "description": "Experimental: assertion validity (30-3600)"
+    },
     "SAP_PP_STRICT": {
       "kind": "raw",
       "default": null
@@ -635,5 +686,7 @@
     "ARC1_CACHE_WARMUP_PACKAGES": "Cache warmup package filters were removed with cache warmup. Remove this environment variable.",
     "SAP_BTP_DESTINATIONS": "The unreleased multi-destination prototype was removed. Use ARC1_MULTI_TARGET_ENDPOINTS=true and mark subaccount destinations with arc1.enabled=true."
   },
-  "ignored": {}
+  "ignored": {
+    "SAP_FEATURE_AMDP": "--feature-amdp / SAP_FEATURE_AMDP is ignored; the unused AMDP probe was removed."
+  }
 }
